@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">DÖNGÜLER</h1></center>
+        <p>
+            Döngüler aynı kodu farklı değişkenlerle döndürmemizi sağlar. FOR ve WHILE, JavaScript'te sıklıkla kullanılan iki döngü komutudur.
+            Varsayalım 5 elemanlı meyveler adında bir dizemiz var. Döngü kullanmadan bunları yazdırmak için uzunca aşağıdaki kodu yazmamız gerekirdi;<br>
+            <b style="color: green" >Örnek</b><br>
+            <img src="images/js_78.png"><br>
+            Fakat <b>FOR</b> döngüsü kullansaydık işte bu kadar kısa olacaktı:<br>
+            <img src="images/js_79.png"><br>
+            O halde böyle kullanışlı bir şeyi kodlarınızda kullanmak için öğrenmeye hazır olun.<br>
+           <h2 style="color: rebeccapurple">FOR Döngüsü</h2>
+
+            Kullanırken noktalı virgülle ayrılmış üç bilgi girmemiz gerekir;<br>
+
+            for ( ifade 1; ifade 2; ifade 3 )<br>
+
+            ifade 1: Döngü öncesi uygulanacak kodlar<br>
+            ifade 2: Döngünün hangi şartlarda devam edeceği<br>
+            ifade 3: Döngü içindeki kodların uygulanması her tamamlandığında çalıştırılacak kodlar<br>
+            Örneğin şu ifadeyi yorumlayalım:<br>
+
+            for (i = 0; i < 5; i++ )<br>
+
+            Burada i = 0, i adlı bir değişken yaratıp 0 değerini verdiğimizi belirtiyor. i < 5, i, 5'ten küçükse döngü devam eder.
+            Ne zaman ki eşit ya da büyük olursa döngü sona erer. Sondaki i++ ise döngü içindeki kodlar her çalıştırıldıktan sonra
+            i değişkeninin değerini 1 arttırmasını ister.
+            Sonuçta döngü i = 0 ile başlayıp her seferde artarak i = 4 olduğunda son kez çalıştırılıp bitecektir. Toplamda 5 kez kodlar çalıştırılır.<br>
+            <h2 style="color: rebeccapurple">FOR/IN Döngüsü</h2>
+        Nesnelerin barındırdığı verileri yazdırmayı sağlar. Örneği inceleyin;<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_80.png"><br>
+        <h2 style="color: rebeccapurple">WHILE Döngüsü</h2>
+        while( koşul ) { kodlar } şeklinde kullanımı olan bu döngü koşul sağlandığı sürece tekrar edecektir. Örneğe bakalım;<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_81.png"><br>
+        Koşul i'nin 10'dan küçük olması. WHILE'ın çalıştırdığı kodlara bakarsanız i++ yani i'nin bir arttırılması istenmiş.
+        Bu sayede i = 0, i = 1 ... i = 9 olur ancak i = 10 olmaz. Çünkü koşul i'nin 10'dan küçük olması şartını koymuş.<br>
+        <h2 style="color: rebeccapurple">DO/WHILE Döngüsü</h2>
+        WHILE koduna benzer şekilde çalışır. Fakat bu kez koşulun kontrol edildiği yer döngünün başında değil sonundadır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_82.png"><br>
+        <h2 style="color: rebeccapurple">Döngüyü Sonlandırmak (break)</h2>
+
+        JavaScript'te çalışmakta olan bir döngü break komutuyla durdurulabilir. Aşağıdaki örnekte 10'dan küçükse çalıştır
+        anlamı içerse de i = 3 olduğunda döngü sonlandırılacaktır. Çünkü break kodu kullanıldı.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_83.png"><br>
+        <h2 style="color: rebeccapurple">Sonraki Tekrara Geçmek (continue)</h2>
+        Döngü tekrarlardan oluşur. Bazı tekrarları hızlı geçmek ve sonraki tekrardan devam etmek isteyebilirsiniz.
+        Bu durum için kullanacağınız kod continue.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_84.png"><br>
+        Yukarıdaki kod çalıştırıldığında "Benim sayım 3" ifadesinin atlandığını göreceksiniz.<br>
+
+        <b style="color: blue" >IF, ELSE IF, ELSE, FOR, WHILE</b>gibi kod blokları içeren komutlar kullanırken eğer yazacağımız
+        kod tek satırsa kıvrımlı parantez {} kullanmadan alt satıra kodu yazabiliriz. Örneğin;<br>
+
+        for ( i = 0; i < 5; i++ )<br>
+        mesaj += "Benim sayım " + i  ;<br>
+
+
+        </p>
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="#">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

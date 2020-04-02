@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">OPERATÖRLER</h1></center>
+        <p>
+        Daha önceki derslerde gördüğümüz gibi JavaScript programlama dilinde atama operatörü eşittir işaretidir.
+           <b style="color: #FFD54F">var fiyat = 100;</b>  örneğinde olduğu gibi
+            tanımlanan değişkene değer atamak için = işareti kullanılır.<br>
+           <h2 style="color: green">Aritmetik İşaretleri</h2>
+            <img src="images/js_23.png" width="810" height="333"><br>
+        <b style="color: black">Bir örnekle açıklayalım</b><br>
+        <img src="images/js_25.png" width="435" height="390"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black" >JavaScript Operatörler - Çarpma</h2>
+        sayi1 = 5, sayi2 = 10, sayi1 ve sayi2'yi çarp, çıkan sonucu toplam değişkenine ata<br>
+        50<br>
+            <h2 style="color: green" >Sayısal Değişkene Değer Atamak </h2>
+        Yukarıda anlatıldığı gibi bunun için eşittir (=) kullanırız.
+        Ancak eşittirin solunda yer vereceğimiz matematiksel bir işaret yoluyla da değer atayabiliriz.
+        Burada atanan değişken "kendisiyle topla", "kendisiyle çarp" gibi bir anlam kazanır.<br>
+        <b>NOT: </b>Aşağıdaki tabloda x = 10, y = 5 alınacaktır!<br>
+        <img src="images/js_24.png" height="232" width="795"><br>
+        <b style="color: black">Bir örnekle açıklayalım</b><br>
+        <img src="images/js_26.png" height="398" width="454" ><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black" >JavaScript Operatörler - Çarpma </h2>
+        sayi1 = 5, sayi2 = 10, sayi1 ve sayi2'yi çarp, çıkan sonucu toplam değişkenine ata<br>
+        50<br>
+        <h2 style="color: rebeccapurple">JavaScript String Operatörleri</h2>
+        + operatörü aynı zamanda string birleştirme işlemlerinde kullanılır.
+        String birleştirme iki veya daha fazla string değerin yan yana getirilmesidir.<br>
+        + operatörü ile string birleştirme yapılırken, metinler arasına boşluk bırakmak için " " yapabilirsiniz.<br>
+        <h2 style="color: rebeccapurple">JavaScript String ile Sayısal Değeri Birleştirme</h2>
+        İki sayıyı + operatörü ile işlerseniz sonuç yine sayı olarak döner.
+        Fakat bir sayı ile string ifadeyi + operatörü ile işlerseniz sonuç string döner.<br>
+        <img src="images/js_27.png" height="137" width="633">
+        <h2 style="color: rebeccapurple"> JavaScript Karşılaştırma Operatörleri</h2>
+        <img src="images/js_28.png" width="670" height="393"><br>
+        <h2 style="color: rebeccapurple" >JavaScript Mantıksal Operatörler</h2>
+        <img src="images/js_29.png" height="158" width="674"><br>
+
+        </p>
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="#">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

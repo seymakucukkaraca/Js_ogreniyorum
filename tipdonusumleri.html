@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">TİP DÖNÜŞÜMLERİ</h1></center>
+        <p>
+            Javascript dinamik bir dildir. Bunun anlamı, bir değişken tanımlanırken, veri tipini belirtme zorunluluğunun olmamasıdır.
+            Buda bir değişkenin veri tipinin kodun çalışması esnasında ihtiyaç olunan veri tipe otomatik dönüştürülmesi anlamına gelir.<br>
+            <b style="color: rebeccapurple">sayi.toString() </b> :<br>
+            Sayıyı String ifadeye çevirir (Number to String).<br>
+            <b style="color: green">Örnek</b><br>
+            <img src="images/js_88.png"><br>
+            <h2> JavaScript Number Methods</h2>
+        The toString() method converts a number to a string.<br>
+        123<br>
+        123<br>
+        123<br>
+        <br>
+        <br>
+        <b>Strings için gibi Boolean dönüştürme</b><br>
+        String(false)      // returns "false"<br>
+        String(true)       // returns "true"<br>
+        <br>
+
+        <b >Boole yöntem toString()aynı işi yapar.</b><br>
+        false.toString()   // returns "false"<br>
+        true.toString()    // returns "true"<br><br><br>
+
+        <h2 style="color: rebeccapurple">Stringler için Tarihlerini dönüştürme</h2>
+        String(Date())  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_86.png"><br>
+        <br>
+        Öncelikle kodumuzun ekran görüntüsünü ekliyoruz!<br>
+        <img src="images/js_87.png"><br>
+        <p>The typeof operator returns the type of a variable or expression.</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var y = "5";
+                var x = + y;
+                document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
+            }
+        </script>
+        <br>
+
+            <b style="color: rebeccapurple">parseInt(string)  </b> :<br>
+            String olarak gönderilen metinsel değeri sayıya çevirir. String ifadesinde ondalık sayi var ise onu siler (String to Number).<br>
+            <b style="color: rebeccapurple">parseFloat(string): </b> :<br>
+            String olarak gönderilen metinsel değeri sayayı çevirir. Ondalık ifade aynen döndürülür (String to Number).<br>
+            <b style="color: rebeccapurple">array.toString() </b> :<br>
+        Array olarak tanımlanan bir değişkeni string ifadeye çevirir (Array to String).<br>
+        document.getElementById("demo").innerHTML = myVar;<br>
+        // if myVar = {name:"Fjohn"}  // toString converts to "[object Object]"<br>
+        // if myVar = [1,2,3,4]       // toString converts to "1,2,3,4"<br>
+        // if myVar = new Date()      // toString converts to "Fri Jul 18 2014 09:08:55 GMT+0200"<br>
+            <b style="color: rebeccapurple"> string.split(karakter) </b> :<br>
+            String olarak tanımlanmış bir ifade belirtilen karakterin içindeki geçtiği yerlerden array ifadeye çevirir (String to Array).<br>
+            <b style="color: rebeccapurple"><br>json.stringify() </b> :<br>
+            Object olarak tanımlanan karakter veya sayısal nesneyi string ifadeye çevirir (JSON to String).
+            <b style="color: rebeccapurple"><br> json.parse(string)</b>: <br>
+            String olarak tanımlanan metinsel JSON değerleri JSON nesnesine çevirir (String to JSON veya parse JSON).<br>
+
+
+        </p>
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="#">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

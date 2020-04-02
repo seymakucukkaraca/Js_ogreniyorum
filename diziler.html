@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">DİZİLER VE DİZİ İŞLEMLERİ </h1></center>
+        <p>
+            JavaScript dizileri birden fazla değeri tek bir değişkende depolamak için kullanılır.<br>
+            <h2 style="color: green"> Dizi nedir?</h2>
+        Dizi özel bir çeşit değişkendir, tek seferde birden fazla değeri barındırabilir.
+
+        Eğer bir listeniz varsa (örneğin araba isimleri listesi), her bir araba ismini değişkenlerde şöyle saklayabilirdiniz:<br>
+
+        var araba1 = "araba1";<br>
+        var araba2 = "araba2";<br>
+        var araba3 = "araba3";<br>
+
+        Ancak, araba isimleri içinden tek bir tanesini bulmanız gerektiğinde ne yapacaktınız? Ve 3 tane değil de 300 araba ismi olsaydı?<br>
+
+        Çözümü bir dizi kullanmak!<br>
+
+        Bir dizi tek bir isim altında birden fazla değeri saklayabilir, ve siz de index numarası yardımıyla istediğiniz değere ulaşabilirsiniz.<br>
+        <h2 style="color: green"> Dizi Oluşturmak</h2>
+        Bir JavaScript Dizisi oluşturmanın en kolay yolu köşeli parantezleri kullanmaktır.<br>
+        Yazımı şu şekildedir:<br>
+        var dizi_ismi = [oge1, oge2, ...];<br>
+        Boşluklar ve satır araları önemli değildir. Dizi oluşturma birkaç satırda birden de yapılabilir:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_65.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        araba1,araba2,araba3<br>
+        <br>
+        Son elemandan sonra virgül koymak (örnek: "araba2",) bazı tarayıcılarda çalışmayabilir.
+
+        Internet Explorer 8 ve öncesinde çalışmazlar.<br>
+        <h2 style="color: rebeccapurple">JavaScript "new" Anahtar Kelimesini Kullanmak</h2>
+        Bu örnek bir dizi oluşturur ve içine değerler atar:<br>
+        <h2 style="color: rebeccapurple"> Dizinin Elemanlarına Erişme</h2>
+        Dizi elemanlarına erişmek için dizideki index numaralarını kullanırız.
+
+        Bu örnek satır arabalar dizisinin ilk elemanına erişir:<br>
+        <b style="color: green">Örnek</b><br>
+        var isim = arabalar[0];<br>
+        <img src="images/js_66.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        araba1<br>
+       <b>Not:</b>  Dizi index numaraları 0'dan başlar.<br>
+
+        [0] birinci elamandır. [1] ise ikinci eleman.<br>
+        <h2 style="color: rebeccapurple"> Dizinin Elemanlarını Değiştirmek</h2>
+        Bu örnek ifade, arabalar dizisinin ilk elemanının değerini değiştirir:<br>
+        <b style="color: green">Örnek</b><br>
+        arabalar[0] = "araba4";<br>
+        <h2 style="color: rebeccapurple"> Bütün Diziye Erişmek</h2>
+        JavaScript ile tüm diziye birden erişmek için sadece dizinin adını kullanmak yeterlidir:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_67.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        araba1,araba2,araba3<br>
+        <br>
+        <h2 style="color: rebeccapurple"> Diziler Objedir</h2>
+        Diziler özel bir tür objedir. JavaScript typeof özelliği diziler için kullanıldığında geriye "object" değerini döndürür.
+
+        Ama JavaScript dizileri en iyi dizi olarak ifade edilebilirler.<br>
+        <h2 style="color: rebeccapurple"> Dizi Elemanları Obje Olabilir</h2>
+        JavaScript değişkenleri obje olabilir. Diziler özel bir çeşit objedir.
+
+        Bu yüzden, farklı türdeki değişkenleri aynı dizi içerisinde kullanabilirsiniz.
+
+        Dizi içerisinde objeleriniz olabilir. Dizi içerisinde fonksiyonlarınız olabilir. Dizi içerisinde diziniz de olabilir:<br>
+
+        yeniDizi[0] = Date.now;<br>
+        yeniDizi[1] = yeniFonksiyon;<br>
+        yeniDizi[2] = arabalar;<br>
+
+        <h2 style="color: rebeccapurple">Dizi Özellikleri ve Metodları </h2>
+        JavaScript dizileri kullanmanın en büyük avantajı hazır olan dizi özelliklerini ve metodlarını kullanabilmektir:<br>
+        <b style="color: green">Örnek</b><br>
+        var x = arabalar.length;   // length özelliği dizideki eleman sayısını döndürür<br>
+        var y = arabalar.sort();   // sort() metodu diziyi sıralar<br>
+        Dizi metodları diğer bölümlerde işlenmiştir.<br>
+        <h2 style="color: rebeccapurple">length Özelliği</h2>
+        length özelliği dizinin uzunluğunu döndürür. (dizideki eleman sayısını).length özelliğinde
+        dönen değer her zaman en yüksek index numarasının bir fazlasıdır.<br>
+        <h2 style="color: rebeccapurple">Dizideki İlk Elemana Erişmek </h2>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_68.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        Muz<br>
+        <br>
+        <h2 style="color: rebeccapurple">Dizideki Son Elemana Erişmek</h2>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_69.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        Mango<br>
+        <br>
+        <h2 style="color: rebeccapurple">Dizi İçinde Döngü Kullanmak</h2>
+        Dizi içinde döngü kullanmanın en güvenli yolu for döngüsü kullanmaktır:<br>
+        Ayrıca Array.forEach döngüsü de kullanabilirsiniz:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_70.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        Muz<br>
+        Portakal<br>
+        Elma<br>
+        Mango<br>
+        <h2 style="color: rebeccapurple">Dizi Elemanı Eklemek</h2>
+        Diziye yeni bir eleman eklemenin en kolay yolu push metodu kullanmaktır:<br>
+        Yeni eleman diziye length özelliği kullanılarak da eklenebilir:<br>
+        <b>Dikkat!</b><br>
+        Diziye yeni bir eleman eklerken yüksek index numaralarıyla eklemek dizide tanımlanamayan boşluklar oluşmasını sağlayabilir:<br>
+        <h2 style="color: rebeccapurple">İlişkisel Diziler</h2>
+        Birçok programlama dili, isimlendirilmiş indexli dizileri destekler.<br>
+
+        İsimlendirilmiş indexli dizilere ilişkisel diziler denir.<br>
+
+        JavaScript ilişkisel dizileri desteklemez.<br>
+
+        JavaScript'te diziler yalnızca numaralı index kullanır.<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_71.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Diziler</h2>
+        3 Ali<br>
+        <br>
+        <b>Dikkat!</b>
+
+        JavaScript'te eğer isimlendirilmiş index kullanırsanız, JavaScript diziyi standart obje türüne çevirecektir.
+        Obje türüne çevrildikten sonra, bazı dizilerle ilgili metodları ve özellikler doğru sonuçlar vermeyecektir.<br>
+        <h2 style="color: rebeccapurple">Diziler ve Objeler Arasındaki Fark</h2>
+        JavaScript'te, diziler numaralı index kullanır.<br>
+
+        JavaScript'te, objeler isimlendirilmiş index kullanır.<br>
+
+        Diziler numaralı index kullanan özel türdeki objelerdir.<br>
+        <h2 style="color: rebeccapurple">Dizi mi Obje mi Kullanmalı?</h2>
+
+        JavaScript ilişkisel dizileri desteklemez.<br>
+        Elemanların isimlerinin yazı (string) olmasını istediğinizde obje kullanmalısınız.<br>
+        Elemanların isimlerinin numara olmasını istediğinizde dizi kullanmalısınız.<br>
+        <h2 style="color: rebeccapurple">new Array() Kullanımı</h2>
+        JavaScript'teki new Array() komutunu kullanmaya gerek yok.<br>
+
+        Bunun yerine [] köşeli parantezleri kullanmalısınız.<br>
+
+        Bu örnekteki iki satır da iki yeni dizi oluşturmaktadır:<br>
+        <b style="color: green">Örnek</b><br>
+        var noktalar = new Array();     // Kötü kullanım<br>
+        var noktalar = [];              // İyi kullanım<br>
+        new kelimesi sadece kodu karmaşıklaştırmaktadır. Ve bazen öngörülemeyen sonuçlarla karşılaşmanızı sağlar:<br>
+        <b style="color: green">Örnek</b><br>
+        var noktalar = new Array(40, 100);  // İki elemanlı bir dizi oluşturur (40 ve 100)<br>
+
+        <h2 style="color: rebeccapurple">Pop ve Push Metodları</h2>
+        Dizilerle çalışırken, yeni eleman eklemek ve olan elemanları çıkarmak çok kolaydır.
+
+        Pop ve push metodları bu işe yarar: Elemanları diziye sokar veya elemanları diziden çıkarırlar.<br>
+        <b>Pop Metodu</b>
+        pop() metodu dizideki son elemanı diziden çıkarır:<br>
+        pop() metodu geriye çıkarılan elemanın ismini döndürür<br>
+        <b>Push Metodu</b>
+        push() metodu dizinin sonuna yeni eleman ekler<br>
+        push() metodu geriye dizinin yeni uzunluğunu döndürür.<br>
+        <b>Shift Metodu</b>
+        Shift metodu da pop metodu gibidir fakat son elemanı değil ilk elemanı diziden çıkarır.
+
+        Daha sonra da çıkarılan eleman yerine bütün diziyi çıkarılan 0 index numarasına göre tekrar kaydırır.<br>
+        shift() metodu geriye diziden çıkarılan elemanın değerini döndürür.<br>
+        unshift() metodu dizinin başına yeni bir eleman ekler ve eski elemanları tekrar kaydırır<br>
+        unshift() metodu geriye dizinin yeni uzunluğunu döndürür.<br>
+        <h2 style="color: rebeccapurple">Eleman Silmek</h2>
+        Diziler JavaScript'te obje olarak kabul edildiklerinden, objeler için kullanılan delete komutu diziler için de kullanılabilir<br>
+        <h2 style="color: rebeccapurple">Diziyi Kesmek</h2>
+        slice() metodu dizinin bir bölümünü keser ve yeni bir diziye aktarır.
+
+        Bu örnekte, dizinin Elma'dan yani 2. elemanından başlayarak kalan kısmı kesilir ve yeni bir diziye aktarılır<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_72.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Dizi Metodları</h2>
+        Elma,Mango,Limon<br><br>
+
+        slice() metodu var olan dizide bir değişiklik yapmaz, yalnızca belirtilen kısımları yeni bir diziye aktarır.
+        slice() metodu iki tane değer alabilir: slice(1, 3) gibi.<br>
+        <h2 style="color: rebeccapurple">toString() Metodu</h2>
+        JavaScript her zaman bir diziyi yazdırmak istediğinizde onu String yani yazıya çevirir.<br>
+        Tüm JavaScript objeleri toString() metoduna sahiptir.
+
+
+
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="#">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="diziler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

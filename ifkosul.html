@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">IF KOŞUL YAPILARI</h1></center>
+        <p>
+            Farklı durumlarda farklı işlemler yapmak gerekebilir. Bu durumların tespit edilmesi için koşul ifadeleri bize yardımcı olur.
+            Şartların sağlanıp sağlanılmadığını tespit ederken standart üç ifade kullanılır. Bunlar if, else if ve else'dir. Örneği inceleyelim;<br>
+            <b style="color: green" >Örnek</b><br>
+            <b style="color: red"> var</b> mesaj = <b style="color: blue">""</b>;<br>
+
+            <b style="color: red"> var</b>  saat = <b style="color: blue">5</b>;<br>
+
+            <b style="color: red">if</b>  ( saat < <b style="color: blue">10</b> )<br>
+            {<br>
+            mesaj = <b style="color: blue" >"İyi sabahlar"</b>;<br>
+            }<br>
+            <b style="color: red">else if</b> ( saat < <b style="color: blue">20</b>)<br>
+            {<br>
+            mesaj = <b style="color: blue" >"İyi günler";</b><br>
+            }<br>
+            <b style="color: red">else</b> <br>
+            {<br>
+            mesaj =<b style="color: blue" > "İyi akşamlar";</b><br>
+            }<br>
+            Örnekte saat değişkeni 5 olarak belirtilmiştir.
+            Bu değişkenin sayısal değerine göre mesaj değişkeninin şekillenmesi isteniyor.
+            Eğer saat 10'dan küçükse "İyi sabahlar", eğer 20'den küçükse "İyi günler", hiçbiri değilse "İyi akşamlar" demesi sağlanıyor.
+            Dikkatli incelendiğinde parantez içerisinde koşullara yer veriliyor.<br>
+
+            * if ( koşul sağlanıyorsa ) { şunları yap }<br>
+            * else if ( koşul sağlanıyorsa ) { şunları yap }<br>
+            * else { şunları yap }<br>
+            Koşul oluştururken mutlaka IF ile başlanır. Parantez içinde koşul belirtilir ve yapılacaklar kıvrımlı parantez içinde yazılır.<br>
+
+            ELSE IF kullanmak için öncelikle IF kullanmış olmak gereklidir.
+            Yani IF kullanmadan ELSE IF ile bir kontrol yapılamaz. "O olmadı bari bunu dene" anlamı taşır.<br>
+
+            ELSE kullanırken parantez açılmaz ve koşul yazılmaz. ELSE, diğer tüm if ve else ifler çalışmadıysa, yani hiçbir koşul
+            sağlanılamadıysa yapılacak şeyi belirtir.<br>
+            <h2 style="color: rebeccapurple"> Koşul Operatörleri</h2>
+
+        Koşul ifadeleri mantıksal değerlerdir. Doğru (true) ya da yanlış (false) olabilirler.
+        İki eşittir (==) bir koşul ifadesidir ve iki değişken ya da değerin denkliğini doğrulamayı sağlar. Örneğin;<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_73.png"><br>
+        <br>
+        Şimdi bu koşul ifadelerini ve anlamlarını listeleyelim:<br>
+        <h2 style="color: rebeccapurple">Karşılaştırmalar </h2>
+       <b>NOT:</b>  Aşağıdaki örneklerde x'in değeri 5 alınacaktır!<br>
+        <img src="images/js_74.png"><br>
+        <h2 style="color: rebeccapurple"> Mantıksal İfadeler</h2>
+        <b>NOT:</b>   Aşağıdaki örneklerde x = 6 ve y = 3 alınacaktır!<br>
+        <img src="images/js_75.png"><br>
+        Mantıksal ifadelerden ve (&&) bağlacında her iki durum da doğru ise koşul sağlanır.
+        Eğer veya (||) bağlacı kullanılmışsa belirtilen koşullardan sadece biri doğru olsa da önerme doğrudur.<br>
+        <h2 style="color: rebeccapurple"> Koşul İfadelerini Tek Satırda Kullanmak</h2>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_76.png"><br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_77.png"><br>
+
+
+
+
+
+        </p>
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="#">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

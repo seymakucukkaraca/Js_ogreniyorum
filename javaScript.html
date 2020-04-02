@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+         a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">JAVASCRİPT NEDİR? </h1></center>
+        <p>Javascript kısaca JS, İnternetin emekleme döneminde piyasaya sürülen bir programlama dilidir.
+            20 yıllık bir geçmişe sahip olan Javascript, HTML işaretleme diline destek olması için Netscape firmasının çalışanı
+            Brendan Eich tarafından geliştirilmiştir.</p>
+        <p>JavaScript popüler bir programlama dilidir. HTML dili ile birlikte kullanılır.
+            İnternette, bilgisayarlarda, tabletlerde ve telefonlarda çalışır.
+            Günümüzde JavaScript desteklemeyen bir tarayıcı kalmamıştır.
+            Javascript, web programlama ile ilgilenenler ve internet sitesi hazırlamaya başlamak isteyenler
+            için bilmeleri gereken bir dildir. Javascript sayfalarınızın işlevsel olmasını sağlar.
+            Kullanıcı ile tarayıcı arasında bir köprü görevi görür.
+            JavaScript'in kısaca işlevlerinden bahsedelim:
+           <p>• HTML tasarımcılarına bir programlama desteği sağlar, bünyesinde değişkenler, fonksiyonlar, döngüler, yordamlar bulundurur.</p>
+           <p>• HTML sayfalarına hareketli HTML nesneleri (metin, resim, vb.) koyabilmemizi sağlar.</p>
+           <p>• Olaylara tepki verir. ( tıklamak, tuşa basmak, sayfa açmak gibi şeyler.)</p>
+           <p>• HTML elemanlarını okuyabilir veya yazabilir.</p>
+           <p>• Kullanıcı ile bilgi alışverişinde bulunmamızı sağlar. Zira HTML formları JavaScript (VB Script) olmadan pek bir işe yaramaz.</p>
+        <p>
+
+    </p>
+        <h2>Javascript HTML Elementlerini Değiştirir</h2>
+        <p>HTML DOM, W3C uyumlu bir HTML elementleri erişim sistemidir. JavaScript HTML ile uyumlu olarak DOM'u değiştirir.
+        <p> Örneğin aşağıdaki örnek id="demo" olan elementin içeriğini (innerHTML) değiştirmeye yarıyor:</p>
+        </p>
+        <b style="color: green">Örnek</b><br>
+        <img src="images/js_1.png" border="3" height="132" width="845"/><br>
+        <p> Bu yöntem kullanılan yüzlerce yöntemden biridir.</p>
+        <p>Mesela  bir örnek verelim.Butona tıklandığında bize zamanı ve saati göstersin!!!</p>
+
+        <h2>My First JavaScript</h2>
+
+        <button type="button"
+                onclick="document.getElementById('demo').innerHTML = Date()">
+            Click me to display Date and Time.</button>
+        <p id="demo"></p>
+        <h2 style="color: rebeccapurple">Yazım kuralları</h2>
+        1)Javascriptte bütün değişkenler Harf yada (_) altçizgi ile başlar. Rakam ile başlayamaz.<br>
+        2)Değişken isimleri 255 karakter uzunluğundan fazla olamaz.<br>
+        3)Javascript’te büyük küçük harf duyarlılığı vardır. Deger isimli değişeken ile deger isimli değişken farklı algılanır.<br>
+        4)Türkçe karakter kullanılamaz.(ı,ş,ğ,ü,ö,ç)<br>
+        5)Değişkenler var ifadesiyle tanımlanır.<br>
+        6)Sabit bir değişkeni const SABİT_DEGER şeklinde tanımlamalısınız. Const yazımı yanlıştır.(madde 3).<br>
+        7)İfade tanımlarında anahtar kelimeler kullanılamaz. (if, for, while vs.)<br>
+        8))Açılan süslü parantezlerin kapatılması gerekmektedir. ( { } )<br>
+        9Javascriptte ‘(tek tırnak) ile “(çift tırnak) işareti arasında işlevsel bakımdan fark yoktur. Ancak iç içe kullanımda birbiriyle çakışmamasına özen gösterilmelidir.<br>
+        <br>
+        <b style="color: rebeccapurple">Açıklama satırları kullanımı</b> <br>
+        Açıklama satırları hem bizim hemde kodu okuyan başka birinin kodların işlevini anlaması için önemlidir. Kullanımı aşağıda gösterilmiştir.<br>
+        // Tek satır açıklama.<br>
+            /*<br>
+            çok satır<br>
+            açıklama<br>
+            */<br>
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="#">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

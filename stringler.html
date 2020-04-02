@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">JAVASCRİPT STRING </h1></center>
+        <p>
+            JavaScript string veri türü, metinleri saklamak ve üzerinde işlem yapmak için kullanılır.
+            <h2 style="color: rebeccapurple">JavaScript String Veri Türü</h2>
+        Bir JavaScript string, basitçe bir grup karakteri saklamaya yarar. "Ali", "Ali Veli", "Bu bir web sitesidir", "sezon11" birer string örnekleridir.
+        Bir string türündeki bir değişkene değer atarken string ifade tırnak içinde yazılmalıdır.<br>
+        Bu tırnak işareti tek veya çift olabilir.<br>
+        <b style="color: green" >Örnek</b><br>
+        //çift tırnak<br>
+        <b> var</b> adsoyad =<b style="color: red" >"Ali Veli"</b>;<br>
+        //veya tek tırnak ile<br>
+        <b> var</b> adsoyad =<b style="color: red" >'Ali Veli'</b>;<br>
+        Bir string değişkene değer atarken, metnin içinde tek tırnak veya çift tırnak olmadığı müddetçe istediğiniz uzunlukta veri girebilirsiniz.
+        Eğer metin içinde  string yapısını bozacak tek tırnak veya çift tırnak varsa buna özel önlem almanız gerekir.
+        Bir metinde string yapısını bozacak tek tırnak veya çift tırnak varsa o zaman JavaScript kaçış işaretini kullanmalısınız.
+        Kaçış işareti <b style="color: red">\</b>  işaretidir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_43.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript Kaçış işareti</h2>
+        Kurt kırmızı başlıklı kıza:"Nereye gidiyorsun? Küçük kız " demiş<br>
+        <h2 style="color: rebeccapurple">String Length (Stringin uzunluğu)</h2>
+        String yerleşik olarak bazı özelliklere sahiptir.<b style="color: red">length </b> bunlardan biridir ve stringin uzunluğunu verir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_44.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">String Length Örneği</h2>
+        Kurt kırmızı başlıklı kıza:"Nereye gidiyorsun? Küçük kız " demiş<br>
+        Metnin Uzunluğu: 64 <br>
+        <h2 style="color: rebeccapurple">Özel Karakterler</h2>
+        Yukarıda bahsedildiği gibi bir stringe atadığınız değer içinde " veya ' gibi özel karakterler
+        varsa bu JavaScript tarafından yanlış anlaşılabilir.
+        Bildiğiniz gibi JavaScript'de  " ve '  karakterleri string değişkene veri atarken kullanılan karakterlerdir.
+        Bu tür bir sorun ile karşılaşmamak için eğer metnin içinde " veya ' karakterleri varsa başına <b style="color: red">\</b>  karakteri
+        koyarak bunun metnin bir parçası olduğunu JavaScript'e bildiririz.
+        <b style="color: red">\</b>karakteri JavaScript'te <b> Kaçış Karakteri</b> olarak adlandırılır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_45.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Kaçış işareti</h2>
+        Kurt kırmızı başlıklı kıza:"Nereye gidiyorsun? Küçük kız " demiş<br>
+        <b style="color: red">\</b>   kaçış karakteri<br><br>
+        * Metinde tek tırnak varsa: <b style="color: red">\</b>  '<br>
+        * Metinde çift tırnak varsa <b style="color: red">\</b>  "<br>
+        * Metinde ters eğik çizgi varsa <b style="color: red">\\</b><br>
+        şeklinde kullanılabilir.<br><br>
+        JavaScript ile kod yazarken kod satırınızın çok uzun olmamasına dikkat edin.
+        Uzun satırlar zor okunur bu sebepten bir satırı en fazla 80 karakter uzunluğunda bırakın.<br>
+        Özellikle string değişkene değer atarken çok uzun bir metin kullanıyorsanız,
+        bunu tek parça yapmak yerine + operatörü ile parçalı şekilde birleştirerek yapın.<br>
+        <h2 style="color: rebeccapurple">JavaScript String Metodları</h2>
+        String metodları, string türü veriler üzerinde işlem yaparken faydalandığımız metodlardır.
+        Normalde String ilkel bir türdür ve ilke türlerde özellik ve metodlar olmaz. Nesnelerin özellikleri ve metodları olur.
+        Fakat JavaScript ilkel değerler için de metod ve özelliklere sahiptir. Çünkü JavaScript ilkel değerleri işlerken bunlara nesne gibi davranır.
+        <h2 style="color: rebeccapurple">String Length (string uzunluğu)</h2>
+        <b style="color: red">length</b>  özelliği stringin uzunluğunu verir (karakter sayısını, boşluklarda dahil olmak üzere).<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_46.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript String Length Özelliği</h2>
+        Length bir stringin uzunluğunu verir<br>
+        15<br>
+        <h2 style="color: rebeccapurple">JavaScript String indexOf() ve lastIndexOf() Metodu</h2>
+        Bir string içindeki bir karakterin ya da metnin bir parçasının sıra numarasını (index) bulmak için <b style="color: red"> indexOf</b> metodu
+        kullanılır. <b style="color: red"> indexOf</b> metodu kendine verilen karakteri ya da kelimeyi metnin içinde arar ve bulduğu <b>ilk </b> değerin
+        sıra numarasını verir. Sıra numarası yani index string işlemlerinde çokca kullanılan bir özelliktir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_47.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript String indexOf Özelliği</h2>
+        indexOf bir stringin içinde arama yapar ve indeks numrasını döndürür<br>
+        11<br>
+        <b style="color: red"> lastIndexOf</b> metodu kendine verilen karakteri ya da kelimeyi metnin içinde arar ve bulduğu
+        son değerin sıra numarasını verir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_48.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript String indexOf Özelliği</h2>
+        lastIndexOf bir stringin içinde arama yapar, buldugu son değerin indeks numrasını döndürür<br>
+        25<br><br>
+        indexOf ve  lastIndexOf metodu, kendine verilen değeri metin içinde bulamazsa geriye -1  döndürür.
+
+        Bunun anlamı değer bulunamadı demektir.<br>
+        <b>Bunu unutmayın!</b>
+        JavaScript saymaya 0'dan başlar.
+        Indeks numarasıda verilirken hesaplamaya sıfırdan başlanır. Yani birinci sıradaki karakterin index numarası 0'dır.<br>
+        Her iki metod içinde aramamaya başlanılacak başlangıç numarası verilebilir.
+
+        Yani diyebilirsinizki "aramaya 10. karakterden sonra başla".
+
+        Bunu metoda ikinci bir parametre vererek yaparız.<br>
+        Metnin içinde kelime aramak için ayrıca  <b style="color: red">search()  </b> metodu vardır. Bu metod indexOf ile
+        aynı çalışır ama <b style="color: red">search()  </b> metodu çok daha güçlüdür.
+        Çok daha fazla parametre alır. Daha fazla seçeneğe sahiptir<br>
+        <h2 style="color: rebeccapurple">String'i parçalara ayırma</h2>
+        JavaScript ile çoğu zaman metinler üzerinde işlemler yaparız.
+        Bazen bir metnin içinde kelime arar bazen de metnin içinden belirli bir bölümü çıkartmak isteriz.<br>
+        JavaScript bu tür metin işlemleri için bize 3 metod sunar:<br>
+        *slice(başlangıç, bitiş)<br>
+        *substring(başlangıç, bitiş)<br>
+        *substr(başlangıç, bitiş)<br>
+        Bu metodlar ile metinler üzerinde ayrıştırma işlemleri gerçekleştirilir.
+        <h2 style="color: rebeccapurple">JavaScript string slice() Metodu</h2>
+        <b style="color: red"> slice()</b> metodu string içinden belirli bir bölümü çıkartmaya yarar.
+
+        JavaScript string<b style="color: red"> slice()</b> metodu iki parametre alır: ilk parametre başlama indeksi, ikinci parametre bitiş indeksidir.
+
+        Bu iki indeks numarası arasındaki bölüm metnin içinden çıkartılır ve yeni bir string değer olarak döndürülür:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_49.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black" >JavaScript String Slice Metodu </h2>
+        slice() metodu başlangıç ve bitiş indeksleri arasındaki veriyi alacaktır:<br>
+        Kiraz<br>
+        Eğer parametre değerlerini negatif verirseniz o zaman parçalama işlemi metnin sonundan başlayacaktır.
+
+        Aşağıdaki örnekte, işlem sağdan sola 11 karakter ilerleyecek ve kesmeye başlayacaktır.
+
+        Kesme işlemi yine sağdan indeksi 6 olan karaktere kadar devam edecek ve iki indeks arasında kalan metin alınacaktır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_50.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black" >JavaScript String Slice Metodu </h2>
+        slice()metodu başlangıç be bitiş indeksleri arasındaki veriyi alacaktır:<br>
+        Kiraz<br>
+        <h2 style="color: rebeccapurple"> JavaScript string substring() Metodu</h2>
+       <b style="color: red">substring() </b> bir önceki yöntem olan <b style="color: red">slice() </b> ile benzerdir.
+        İki metod arasındaki fark <b style="color: red">substring() </b> metodu negatif değer almaz.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_51.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript String substring Metodu</h2>
+        substring() metodu başlangıç ve bitiş indeksleri arasındaki veriyi alacaktır:<br>
+        Karpuz<br>
+        Eğer ilk parametre negatif olursa, başlama pozisyonu metnin sonundan hesaplanır.
+        İkinci parametre negatif olamaz.
+        İkinci parametre atlanırsa, başlangıç indeksinden sonraki tüm metin alınır.<br>
+        <h2 style="color: rebeccapurple">JavaScript String replace() Metodu </h2>
+        replace() metodu ile bir metnin içinde arama yapıp, bulduğumuz değerleri yine istediğimiz bir değer ile değiştirebiliriz.
+        Varsayılan olarak JavaScript string replace() metodu, sadece ilk bulduğu değeri değiştirir.<br>
+        <h2 style="color: rebeccapurple">JavaScript ile Metni Büyük Harf veya Küçük Harfe Çevirme (toUpperCase() ve toLowerCase() metodu) </h2>
+        Eğer bir metni tamamen büyük harfe çevirmek isterseniz JavaScript string toUpperCase() metodunu kullanabilirsiniz.<br>
+
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_53.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        JAVASCRIPTI  HEP BIRLIKTE OGRENIYORUZ:)<br>
+        Eğer bir metni tamamen küçük harfe çevirmek isterseniz JavaScript string toLowerCase() metodunu kullanabilirsiniz:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_54.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        merhaba gençlik!!!<br>
+        <br>
+        <h2 style="color: rebeccapurple"> JavaScript String concat() Metodu</h2>
+        concat() metodu iki veya daha fazla stringi birleştirmeye yarar.
+
+        Daha önceden string birleştirme için + operatörünü kullanmıştık. concat() de aynı işlevi görür.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_55.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript String concat Metodu</h2>
+        concat() iki veya daha fazla stringi birleştirir:<br>
+        javascript ogreniyorum<br>
+        <br>
+        <h2 style="color: rebeccapurple"> JavaScript String split() Metodu </h2>
+        Elinizde bir ayırıcı ile ayrılmış veri varsa bunu parçalara bölmek, bir diziye aktarmak isteyebilirsiniz.<br>
+        Örneğin mart, nisan, mayıs şeklinde virgül ile ayrılmış verimiz olsun.
+        JavaScript string split() metonu ile bu veriyi ayrıştırmak ve ayları bir diziye yerleştirmek mümkündür.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_56.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript string split Metodu </h2>
+        nisan<br><br>
+        Bu şekilde belirli bir ayıraç ile gelen veriyi kolayca parçayalabilir, daha düzenli veri elde edebiliriz.<br>
+        <h1 style="color: rebeccapurple">JavaScript Sayılar</h1>
+        Farklı programlama dillerinde farklı sayı türleri vardır. Örneğin C# dilinde int, int16, decimal gibi farklı türler vardır.
+
+        16 gibi bir sayıyı tutmak için int türü yeterli olurken, 3.15 gibi küsurlu değerleri tutmak için decimal kullanılır.
+
+        JavaScript programlama dilinde tek bir sayı türü vardır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <b> var</b> adet = <b style="color: red">15</b> ; // tam sayı<br>
+        <b> var</b>  fiyat = <b style="color: red">15</b>; // Küsurlu sayılar. Para gibi.<br>
+        Çok büyük veya çok küçük sayılar bilimsel gösterim ile yazılabilir:<br>
+        <b> var</b>sayi1 =<b style="color: red"> 321e5</b>;    // 32100000<br>
+        <b> var</b> = <b style="color: red"312e-5></b>;   // 0.00321<br>
+        JavaScript diğer programlama dillerinden farklı olarak, int, short, long gibi farklı sayı türleri tanımlamaz.
+
+        JavaScript sayıları her zaman 64-bit Floating Point (kayan nokta) olarak tutar.<br>
+        <h2 style="color: rebeccapurple">JavaScript NaN Nedir? (Not a Number / Bir Sayı Değil)</h2>
+        Fakat eğer string değer sayısal değer içeriyorsa sonuç sayı olur:<br>
+        <h2 style="color: rebeccapurple">JavaScript Programlama Dilinde Sayılar Nesne Olabilir</h2>
+        Daha önce stringde gördüğümüz gibi sayılar nesne olarak tanımlanabilir.<br>
+        Normalde JavaScript sayıları ilkel değerlere sahiptir: 1,255, 5678 gibi.<br>
+        Fakat var sayiNesne= new Number(123); şeklinde nesne olarak tanımlanabilir.<br>
+        Bu şekilde tanımlamak JavaScript'i yavaşlatır. O sebepten gerçekten ne yaptığınızı bilmiyoranız kullanmayın.<br>
+        <h2 style="color: rebeccapurple"> JavaScript Sayı Metodları</h2>
+        JavaScript sayı metodları sayılarla çalışırken bize yardımcı olurlar.<br>
+        <h2 style="color: rebeccapurple"> JavaScript toString() Metod</h2>
+        toString() metodu sayıyı stringe çevirir.
+        Sayıları sadece sayısal işlemlerde kullanırız. Bunun dışında bir string ile sayısı işleyeceksek, sayısal değeri stringe çeviririz.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_60.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black"> JavaScript toString() Metod</h2>
+        Sayı stringe çevrildi:100<br>
+        <br>
+        <h2 style="color: rebeccapurple">JavaScript toFixed() Metodu</h2>
+        toFixed() metodu, belirtilen sayıda ondalık değere sahip string döndürür.
+
+        Özellikle para gibi değerleri tutan değişkenlerde kullanılır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_61.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: rebeccapurple">JavaScript toString() Metodu</h2>
+        9.765 değeri için:<br>
+        sayi.toFixed(0):10<br>
+        sayi.toFixed(2):9.77<br>
+        sayi.toFixed(4):9.7650<br>
+        sayi.toFixed(6):9.765000<br><br>
+        <h2 style="color: rebeccapurple"> JavaScript toPrecision() Metodu</h2>
+        <b>JavaScript toPrecision(n)</b> metodu uygulanan sayı, parentez içinde verilen değerden daha fazla tam sayı içeriyorsa
+        bilimsel (üstel) gösterim ile döndürür:<br>
+        Örneğin: (312).toPrecision(2) 3.1e+2 sonucunu döndürür.<br>
+        Bilimsel gösterim, çok büyük veya küçük sayıları göstermek için kullanılan bir standarttır.<br>
+        Bilimsel çalışmalarda çok büyük ve küçük sayılar kullanılır<br>
+        toPrecision(n) metodu daha çok ondalıklı işlemlerde kullanılır. Parantez içinde verilen sayı kadar basamağı size döndürür.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_62.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript toPrecision() Metodu</h2>
+        9.765 değeri için:<br>
+        sayi.toPrecision(2):9.8<br>
+        sayi.toPrecision(3):9.77<br>
+        sayi.toPrecision(4):9.765<br>
+        <h2 style="color: rebeccapurple">JavaScript Bir Değişkeni Sayıya Çevirmek</h2>
+        JavaScript programlama dilinle bir değişkeni sayıya çevirmek için 3 metod vardır:<br>
+        *Number() metodu<br>
+        *parseInt() metodu<br>
+        *parseFloat() metodu<br>
+        Bunlar sayı metodları değildir fakat global JavaScript metodlarıdır.<br>
+        <h2 style="color: rebeccapurple">JavaScript Number() Metodu</h2>
+        Number() metodu JavaScript değişkenleri sayıya çevirmek için kulllanılır:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_63.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Number() Metodu</h2>
+        10<br>
+        <br>
+        <h2 style="color: rebeccapurple">JavaScript parseInt() Metodu</h2>
+        parseInt() string değeri ayrıştırır, geriye tam sayı döndürür:<br>
+        <h2 style="color: rebeccapurple">JavaScript parseFloat() Metodu</h2>
+        parseFloat() string değeri ayrıştırır, geriye  sayı döndürür. parseInt() metodundan farklı olarak varsa ondalık haneyi de döndürür:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_64.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color:black">JavaScript parseFloat() Metodu</h2>
+        5<br>
+        5.22<br>
+        5<br>
+        5<br>
+        NaN<br>
+        <br>
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="#">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

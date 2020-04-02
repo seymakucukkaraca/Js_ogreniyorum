@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">VERİ TÜRLERİ </h1></center>
+        <p>
+            <b style="color: green"> Veri Türü nedir?</b><br>
+            İnsanlardan farklı olarak bilgisayarlar,
+            1234 ve abcd arasındaki farkı anlayamazlar. Yani hangisi sayı, hangisi metin bunu ayırt edemezler.
+            Veri türü, değişkenler içinde saklanacak verinin türüne göre sınıflandırılmasıdır.
+            Veri türleri her programla dili için oldukça önemli bir kavramdır.
+            Bir uygulama geliştirirken değişken içinde saklanan verinin türünü önceden belirtiriz.
+            Böylece bilgisayar verinin saklanacağı bellek alanını buna göre ayırır.<br>
+            JavaScript değişkenleri çok farklı veri türlerini tutabilir.
+            JavaScript programlama dilinde başlıca veri türleri sayı (number), metin(string) ve nesne (object) türleridir.<br>
+            <h2 style="color: green">Veri Türü Kavramı</h2>
+        Veri türü programlamada önemli bir kavramdır. Sadece JavaScript'e özel bir ifade değildir.
+
+        Bir değişken üzerinde işlem yaparken onun veri türünü bilmemiz gerekir.<br>
+
+        Veri türleri olmadan aşağıdaki gibi işlemleri bilgisayar çözemez:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_30.png" width="620" height="75"><br>
+        Yukarıdaki işlem mantıklı bir işlem değildir. Matematik derslerinde hocaların dediği gibi elma ile armutu toplayamazsınız.<br>
+
+        Yukarıdaki işlem hata vermez fakat bir toplama işlemi gerçekleşmez, string birleştirme işlemi gerçekleşir ve sonuç şu şekilde görüntülenir:<br>
+        20araba <br>
+        Fakat aşağıdaki işlem, yukarıdaki işleme göre daha farklıdır:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_31.png" height="66" width="621"><br>
+        Bunun sebebi 20 sayısı "20" şeklinde tırnak içinde yazıldığında bilgisayar bunu artık string olarak kabul eder.<br>
+
+        Bir string ile sayının toplanmasının sonucu string değer doğurur:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_32.png" width="586" height="319"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        Sayı ile String değerin toplanmasının sonucu string değerdir:<br>
+        20araba<br><br>
+        JavaScript ifadeleri soldan sağa doğru işletir. Farklı işlemler farklı sonuç üretir:<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_33.png" height="337" width="457"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        Sayı + Sayı ile String değerin toplanmasının sonucu string değerdir:<br>
+        30araba<br>
+        <h2 style="color: rebeccapurple"> JavaScript Türleri Dinamiktir</h2>
+        JavaScript dinamik türlerere sahiptir. Bunun anlamı, Aynı JavaScript değişkeni farklı veri türlerini tutabilir.<br>
+        <h3 style="color: green">Örnek</h3>
+        <b >var </b> x;    // undefined<br>
+        <b >var </b> 10;   // Şuan veri türü sayı<br>
+        <b >var </b> Ali;  // Şuan veri türü string<br>
+        Aynı değişkeni farklı ifadelerde farklı veri türlerine dönüştürmek mümkündür.
+        <h2 style="color: rebeccapurple">JavaScript String (Metin)</h2>
+        Bir string harf, sayı gibi karakter bileşenlerinden oluşan türdür.  Örneğin "Ali Veli", "Numara13", "abc" birer string türdür.<br>
+        JavaScript programlama dilinde string veri türü tırnak içinde yazılır. Bu tırnak çift veya tek olabilir:<br>
+        <h3 style="color: green">Örnek</h3>
+        <b >var </b> websitesi ="<b style="color: red" >JavaScript.net</b> "<br>
+        <b >var </b> websitesi ='<b style="color: red" >JavaScript.net</b> '<br>
+        <h2 style="color: rebeccapurple"> JavaScript Number (Sayı)</h2>
+        -> JavaScript programlama dilinde sadece tek tür sayı vardır.<br>
+        ->Bir değişkene sayılsal değer atanıyorsa bu değer tırnak içinde yazılmaz.<br>
+        ->Sayılarda ondalık bölüm nokta ile yazılır:<br>
+        <h3 style="color: green">Örnek</h3>
+        <b >var </b> sayi1=<b style="color: red">10</b>;<br>
+        <b>var </b> sayi2=<b style="color: red">99.9</b>;<br>
+        <h2 style="color: rebeccapurple">JavaScript Boolean (Doğru/Yanlış)</h2>
+       <b> Boolean </b>veri türü sadece iki değer alır:<b>true </b> (doğru) ve <b>false</b>  (yanlış)<br>
+        <b >var </b> ogrenciMi= <b style="color: green">true;</b><br>
+        <b >var </b> aktifMi=<b style="color: green">false;</b><br>
+        Boolean veri türü genelde koşul ifadelerinde kullanılır.
+        Koşul ifadeleri ile ilgili ilerleyen derslerde daha fazla bilgi verilecektir.
+        <h2 style="color: rebeccapurple">JavaScript Array (Dizi)</h2>
+        Eğer elinizde birbiriyle ilişkili bir grup veri varsa bu verileri Array adı verilen yapılarda saklarız.
+        JavaScript dizi yapıları köşeli parantez ile oluşturulur. Dizinin elemanları virgül ile ayrılır.<br>
+        Aşağıdaki örnek <b style="color: red">arabalar</b>  adında bir dizi oluşturur. Bu dizi 4 elemana sahiptir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_34.png" width="480" height="302"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Dizi (Array)</h2>
+        Ford<br><br>
+        Array içindeki elemanları saymaya sıfırdan başlarız.
+        Yani <b style="color: red">Ford </b> dizinin ilk elemanı<b style="color: red"> [1]</b>, son elemanı
+        Mercedes  markası <b style="color: red">[3]  </b>indeks numarasına sahiptir.
+        <h2 style="color: rebeccapurple">JavaScript Object (Nesne)</h2>
+        JavaScript nesneleri süslü parantez {} ile oluşturulur.
+
+        Nesnenin özellikleri özellik:değer şeklinde virgül ile ayrılılarak yazılır.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_35.png" height="402" width="508"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Nesne (Object)</h2>
+        Ad: Ali Veli Yaş: 40 <br>
+        Bu örnekte<b style="color: red" > kisi</b> adında bir nesne oluşturulmuştur. Bu nesnenin 3 özelliği vardır:
+        <b style="color: red" > ad</b> , <b style="color: red" >soyad </b> ,<b style="color: red" >yas </b><br>
+        <h2 style="color: rebeccapurple">JavaScript typeof Operatörü</h2>
+        JavaScript <b style="color: red" > typeof</b>  operatörü JavaScript değişkeninin veri türünü bulmak için kullanılır.
+
+        <b style="color: red" > typeof</b>  operatörü değişkenin türünü döndürür.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_36.png" width="597" height="369"><br>
+        <h2 style="color: black">JavaScript typeof</h2>
+        JavaScript typeof bir değişkenin veya ifadenin türünü döndürür<br>
+
+        string<br>
+        number<br>
+        <h2 style="color: rebeccapurple">İlkel Veri  (Primitive Data)</h2>
+        Bir veri türü sadece tek bir değer saklıyor ve özellikleri yoksa ilkel veri  olarak adlandırılır.
+
+        <b style="color: red" > typeof</b>  operatörü aşağıdaki ilkel veri türlerini döndürür:<br>
+
+       * string <br>
+       * number<br>
+       * boolean<br>
+       * null<br>
+       * undefined <br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_37.png" ><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript typeof - ilkel veri</h2>
+           JavaScript typeof bir değişkenin veya ifadenin türünü döndürür <br>
+            string<br>
+            number ogrenciMi: boolean<br>
+        <h2 style="color: rebeccapurple">Karmaşık Veri (Complex Data)</h2>
+        JavaScript  <b style="color: red" > typeof</b>operatörü  aşağıdaki iki karmaşık türü döndürür:<br>
+
+        * function<br>
+        * object<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_38.png"><br>
+        <b style="color: green" >Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript typeof</h2>
+        object<br>
+        object<br>
+        function<br>
+        <b style="color: red" > typeof</b> Array yani dizi için object döndürür. Çünkü array bir nesnedir<br>
+        <h2 style="color: rebeccapurple">JavaScript undefined</h2>
+        JavaScript programlama dilinde, bir değişkene değer atanmazsa, bir değişkenin değeri yoksa <b>undefined</b> olarak ifade edilir.<br>
+        JavaScript typeof operatörü değer atanmamış değişkenler için  <b>undefined</b>  türünü döndürür.<br>
+        <h2 style="color: black">JavaScript Undefined</h2>
+        Kişi:<br>
+        undefined<br>
+        <h2 style="color: rebeccapurple">Boş Değer</h2>
+        Bir değişkene boş değer atamak mümkündür.
+        Boş değer undefined anlamına gelmez. Boş değerin veri türü string'tir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <b>var</b> araba =""; // değişkenin değeri boştur fakat veri türü string'tir.
+        <h2 style="color: rebeccapurple">JavaScript Null</h2>
+        JavaScript'te Null hiçbir şeydir.  Null hiç bir değer taşımamasına rağmen türü object yani nesnedir.
+        Null türünü doğrudan kullanmazsınız. Fakat yapılan bazı işlemlerin sonucunda Null değer dönebilir.<br>
+        Örnek olarak, bir veritabanından veri çektiğinizi düşünün. Örneğin numarası 10 olan ögrencinin verilerini çekmek istiyorsunuz.
+        Fakat veritabanında 10 numaralı bir öğrenci yok. İşte bu durumda size dönen değer Null değeridir.<br>
+        <b style="color: green" >Örnek</b><br>
+        <b>var</b> ogrenci = null; //değer null fakat veri türü object, nesnedir.
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="#">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

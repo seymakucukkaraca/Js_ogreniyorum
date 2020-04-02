@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">YAZILIM YAPISI</h1></center>
+        <p><b>NOT : JavaScript kullanabilmek için öncelikle HTML Dili bilmeniz gereklidir!</b></p>
+        <img src="images/js_5.png" border="0" height="43" width="831">
+        <img src="images/js_2.png" border="3" height="166" width="844"/>
+        <h2>JavaScript HTML Belgesinin Neresinde Kullanılır?</h2>
+        <img src="images/js_3.png" border="0" height="49" width="529">
+        <p><b>NOT : BODY elementi içerisinde kullanmak sayfa yüklenme hızını arttıracaktır.</b></p>
+        <p>Aşağıdaki örnek HEAD bölümünde JavaScript kullanılarak yapılmıştır;</p>
+        <p>JavaScript Kodu</p>
+        <p>Aşağıdaki örnek ise JavaScript kodunun BODY içerisinde kullanılmasıyla oluşturulmuştur:</p>
+        <img src="images/js_4.png" border="0" height="528" width="847">
+        <h2>JavaScript Kodlarını Dosyadan Kullanma</h2>
+        <p>İsterseniz bir javascript dosyası oluşturarak ve bunu HTML belgenizden çağırarak
+            kullanabilirsiniz. Bu kullanım şekli kaynak kodlarınızın sade olmasını sağlayacaktır.
+        </p>
+       <img src="images/js_6.png" border="0" height="46" width="793">
+       <img src="images/js_7.png" border="0" height="24" width="573">
+       <h2>JavaScript'i Test Etmek</h2>
+        <p>JavaScript'in yazdırma ya da çıktı verme gibi bir özelliği yoktur.
+            JavaScript, sadece HTML Belgesinde yer alan nesneleri değiştirmek için kullanılır.</p>
+        <pre><h2>getElementById() Fonksiyonu</h2></pre>
+        <p>HTML nesnelerine erişmek için JavaScript'in getElementById(id) kodunu kullanırız.
+        <p>Yukarıdaki kodda parantez içinde yer alan id, HTML nesnesini tanımlayan bir id özelliğidir.
+        Aşağıdaki örnekte innerHTML ise tanımlanan nesnenin içeriğidir.Aşağıdaki kodu yazarak bir HTML nesnesinin içeriğini değiştirebildik :</p>
+        <img src="images/js_8.png" border="0" width="846" height="399">
+        <p>Yukarıdaki JavaScript kodu (script  içindeki) web tarayıcısı tarafından çalıştırılır.
+        </p>
+        <p><b>->document.getElementById("para") </b>bir javascript kodudur ve id="para" olan HTML nesnesini seçmemize yarar.</p>
+        <p><b>->innerHTML = "Paragraf değişti" ; </b>kodu ise HTML içeriğini değiştirmeye yarar.
+        </p>
+        <h1>HTML Belgesine Yazdırmak</h1>
+        <p>Sadece test amaçlı olarak HTML belgesine yazı yazdırmak için<b> document.write() </b> kodunu kullanabilirsiniz.</p>
+        <img src="images/js_9.png" height="399" width="841">
+        <h2>Konsola Yazdırmak</h2>
+        <p>Eğer tarayıcınız hata ayıklama özelliğine sahipse, console.log() kodunu kullanarak JavaScript değerlerini
+            tarayıcınızın konsol bölümünde görebilirsiniz.
+        </p>
+        <br>
+        <p>Konsol bölümüne erişmek ve hata ayıklamayı başlatmak için tarayıcınızda F12'ye basmalısınız.</p>
+        <img src="images/js_10.png" width="846" height="421">
+        <p><b>NOT: </b>Hata ayıklama, bilgisayar programlama dillerindeki hataları fark etmek ve azaltmak için kullanılır.</p>
+        <h1>JavaScript İfadeleri</h1>
+        <p>JavaScript ile kodlama yaparken JavaScript ifadelerinden faydalanılırız. Bu kodlar yazılırken ifadeler<b> noktalıvirgül (;) </b> ile biter.
+        </p>
+        <img src="images/js_11.png" height="167" width="843">
+        <p>JavaScript ifadelerinin tamamı noktalı virgül ile bitmez. IF, FUNCTION, FOR, DO gibi bazı ifadeler, ifade grupları oluşturmaya yarar. Bu tarz ifade grupları oluştururken kıvrımlı parantez kullanılır.
+        </p>
+        <img src="images/js_12.png" width="843" height="189 ">
+        <p>Bazen kodlama yaparken hatırlatma ya da bilgilendirme amaçlı yazılar yazmamız gerekebilir. JavaScript buna izin verir.
+            Bunun için <b>tek satırlık ifadelerde // birden fazla satırlı ifadelerde ise /* ... */</b> kullanılır. Örneği inceleyin;</p>
+        <img src="images/js_13.png" height="506" width="842">
+        <p>JavaScript ifadelerini yazarken ifade, değişken ve değerler arası boşluk bırakabilir ya da bunları bitişik yazabiliriz.
+            Aşağıdaki örnekte belirtilen her iki ifade de aynıdır.</p>
+        <img src="images/js_14.png" width="844" height="149">
+
+
+
+
+
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="#">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href= "veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

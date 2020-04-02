@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">FONKSİYON YAPISI </h1></center>
+        <p>
+            Bir JavaScript fonksiyonu, özel bir işlemi yerine getirmek için tasarlanmış bir blok koddur.
+            Bir JavaScript fonksiyonu farklı bir kod tarafından çağrıldığı zaman çalışır.<br>
+            <b style="color: green" >Örnek</b><br>
+            <img src="images/js_40.png"><br>
+            <b style="color: green">Ekran çıktısı</b><br>
+            <h2 style="color: black">JavaScript Fonksiyonlar</h2>
+            Basit toplama işlemi<br>
+            5 + 4 = 9<br>
+        <h2 style="color: rebeccapurple">JavaScript Fonksiyon Sözdizimi</h2>
+        Bir JavaScript fonksiyonu oluşturmak için<b style="color: red" >function </b>anahtar kelimesini kullanırız.
+        Daha sonra bu fonksiyona bir ad veririz.<br>
+        Fonksiyona ad verildikten, parentez açıp kapatılır
+        <b style="color: red" >() </b>ve en sonunda <b style="color: red" >{}</b> parantezleri arasına fonksiyon çağrıldığında
+        çalışacak kod blogunu yazarız.<br>
+        Fonksiyon adı harf, sayı, alt çizgi ve dolar işaretini barındırabilir.<br>
+        Fonksiyon eğer parametre alıyorsa fonksiyon adından sonra<b style="color: red">() </b> parantezleri arasına parametreler girilir:
+        <b style="color: red">(parametre1, parametre2) </b><br>
+        <b style="color: green" >Örnek</b><br>
+        function <b style="color: red">fonksiyonAdi</b>(parametre1, parametre2)
+        {<br>
+        //fonksiyon çağrıldığında çalıştırılacak kod bloğu <br>
+        }<br>
+        Fonksiyon parametreleri, fonksiyon çağrıldığında gönderilecek ve fonksiyon tarafından işlenecek verilerdir.
+        Örneğin, fonksiyona gönderilen iki sayıyı toplayacak bir fonksiyon yazmak istiyorsak, gönderilecek değerler
+        için fonksiyona parametre ekleriz.
+        Fonksiyon bu parametrelere atanan değerleri alır ve kod bloğu içinde bunları işler.
+        Fonksiyon parametreleri  <b style="color: red">{}</b> içinde yerel değişkenler gibi kullanılır.<br>
+        <h2 style="color: rebeccapurple">JavaScript Fonksiyonunu Çalıştırmak / Çağırmak</h2>
+        Oluşturulan JavaScript fonksiyonu özel bir şekilde tanımlanmadıysa kendi başına çalışmaz. Fonksiyonu çalıştırmak için onu çağırmanız gerekir.<br>
+        Bir Fonksiyon şu durumlarda çalışır:<br>
+        *Bir olay tetiklendiğinde fonksiyon çalıştırılabilir (örneğin kullanıcının bir butona tıklaması bir olaydır)<br>
+        *Başka bir JavaScript kodu tarafından fonksiyon çalıştırılabilir.<br>
+        *Otomatik olarak / kendi kendini  çağırarak<br>
+        <h2 style="color: rebeccapurple">JavaScript Fonksiyonu ile Değer Döndürmek </h2>
+        Bir JavaScript fonksiyonu kendine verilen görevi yerine getirdikten sonra değer döndürebilir.
+        Bazı fonksiyonlar içindeki kod blogunu işler ve görevi sona erer.
+        Bazı fonksiyonlar da kod blogunu işler ve bu işlemin donunda çağrıldığı noktaya bir değer döndürür.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_41.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Fonksiyonlar</h2>
+        Basit çarpma işlemi<br>
+        5 x 4 = 20<br>
+        Yukarıdaki örnekte ilk satırda <b style="color:red">sonuc </b> adında bir değişken tanımlanıyor.<br>
+
+        Yine aynı satırda <b style="color:red">carpma(4,3)</b> fonksiyonu çağırılıyor / çalıştırılıyor. Bu fonksiyon iki parametre alıyor: 4,3
+
+        <b style="color:red"> carpma()</b> fonksiyonu iki sayıyı çarpacak ve çıkan sonucu yani 12 değerini <b style="color:red">sonuc </b> değişkenine
+        atayacaktır.<br>
+        <h2 style="color: rebeccapurple">Neden Fonksiyon Kullanırız?</h2>
+        Fonksiyonlar sayesinde yazdığımız kodları tekrar tekrar kullanabiliriz.<br>
+        Aynı kodu tekrar yazmamız gerekmez.<br>
+        Fonksiyonlar uygulamaların daha küçük parçalara bölünmesini sağlar.<br>
+        Böylelikle kod daha anlaşılır hale gelir.<br>
+        <h2 style="color: rebeccapurple">() Operatörü Fonksiyonu Çağırır</h2>
+        JavaScript fonksiyonun sadece adını yazarsanız geriye fonksiyon nesnesi döner.
+        Fonksiyonu () simgeleri ile çağırırsanız size sonuç döner.<br>
+        <b style="color: green" >Örnek</b><br>
+        <img src="images/js_42.png"><br>
+        <b style="color: green">Ekran çıktısı</b><br>
+        <h2 style="color: black">JavaScript Fonksiyonlar</h2>
+        () kullanılmazsa ne olur?<br>
+        5 x 4 = function carpma(sayi1, sayi2) { return sayi1 * sayi2; }<br>
+        <h2 style="color: rebeccapurple">Fonksiyonlar Değişkene Doğrudan Değer Atamak İçin Kullanılabilir</h2>
+        Bir fonksiyonun dönen değeri doğrudan bir değişkene atanabilir.
+        Bunun yanında fonksiyon string birleştirme ya da matematiksel işlemlerde doğrudan da kullanılabilir.<br>
+        <b style="color: green" >Örnek</b><br>
+        // Fonksiyonun dönen değerini bir değişkene atayabilirsiniz
+       <b> var</b> sonuc = carpma(<b style="color: red">4</b> ,<b style="color: red">3</b>);<br>
+        <b>var</b> metin = <b style="color: red">"Bu işlemin sonucu:"</b>  + sonuc;<br>
+
+        //Veya doğrudan yapmak istediğiniz işlemde kullanabilirsiniz<br>
+
+        <b> var</b> metin = =  <b style="color: red">"Bu işlemin sonucu:"</b>
+        +  carpma(<b style="color: red">4</b> ,<b style="color: red">3</b>);<br>
+
+
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="#">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>
+ /* <b style="color: green" >Örnek</b><br>
+
+*/
