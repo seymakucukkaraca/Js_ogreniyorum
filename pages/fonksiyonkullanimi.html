@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">FONKSİYON KULLANIMI</h1></center>
+        <p>
+            Daha önceden fonksiyonlardan bahsetmiştik.Şimdi de kullanımına bakalım.<br>
+            <b style="color: rebeccapurple">JavaScript Fonksiyon Çağırma</b> <br>
+
+            *İşlev tanımlandığında işlev içindeki kod yürütülmez.<br>
+
+            *Bir işlevin içindeki kod, işlev çağrıldığında yürütülür.<br>
+
+            *"Bir işlevi çağırmak" yerine "bir işlevi çağır" terimini kullanmak yaygındır.<br>
+
+            *"Bir işlevi çağırmak", "bir işlevi başlatmak" veya "bir işlevi yürütmek" demek de yaygındır.<br>
+
+            *Bu öğreticide, invoke kullanacağız, çünkü bir JavaScript işlevi çağrılmadan çağrılabilir.<br>
+            <h2 style="color: rebeccapurple">Bir Fonksiyonu Fonksiyon Olarak Çağırma</h2>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j13.png"><br>
+        <h2>JavaScript Functions</h2>
+        The global function (myFunction) returns the product of the arguments (a ,b):<br>
+        20<br>
+
+        Yukarıdaki işlev herhangi bir nesneye ait değildir. Ancak JavaScript'te her zaman varsayılan bir global nesne vardır.<br>
+
+        HTML'de varsayılan global nesne HTML sayfasının kendisidir, bu nedenle yukarıdaki işlev HTML sayfasına "aittir".<br>
+
+        Bir tarayıcıda sayfa nesnesi tarayıcı penceresidir. Yukarıdaki işlev otomatik olarak bir pencere işlevi haline gelir.<br>
+        <br>
+       <h2 style="color: rebeccapurple">Bir Fonksiyonu Yöntem Olarak Çağırma</h2>
+        JavaScript'te işlevleri nesne yöntemleri olarak tanımlayabilirsiniz.
+
+        Aşağıdaki örnek, iki özellik (firstName ve lastName) ve bir yöntem (fullName) içeren bir nesne (myObject) oluşturur:<br>
+        <img src="../images/j14.png"><br>
+        <h2> JavaScript Functions</h2>
+        myObject.fullName() will return Seyma Kucukkaraca:<br>
+        Seyma Kucukkaraca<br>
+        FullName yöntemi bir işlevdir. İşlev nesneye aittir. myObject, işlevin sahibidir<br>
+        <b style="color: rebeccapurple">Yöntem Yeniden</b><br>
+        <b style="color: red">Call ()</b>  yöntemiyle, farklı nesnelerde kullanılabilecek bir yöntem yazabilirsiniz.<br>
+
+        <b>Tüm Fonksiyonlar Yöntemdir</b>
+        JavaScript'te tüm işlevler nesne yöntemleridir.
+
+        Bir işlev bir JavaScript nesnesinin yöntemi değilse, genel nesnenin bir işlevidir<br>
+        <b style="color: rebeccapurple"> this</b>
+
+        Bir işlev tanımında, this işlevin "sahibini" ifade eder.
+
+        Yukarıdaki örnekte, this, fullName işlevine "sahip" olan kişi nesnesidir.
+
+        Başka bir deyişle, this.firstName this nesnenin firstName özelliği anlamına gelir.<br>
+
+        <h2 style="color: rebeccapurple">JavaScript call () Yöntemi</h2>
+
+        Call () yöntemi, önceden tanımlanmış bir JavaScript yöntemidir.<br>
+
+        Bir bağımsız değişken (parametre) olarak sahip nesnesine sahip bir yöntemi çağırmak (çağırmak) için kullanılabilir.<br>
+
+        Call () ile, bir nesne başka bir nesneye ait bir yöntemi kullanabilir.<br>
+        <br>
+        <img src="../images/j15.png"><br>
+        <b style="color: green">Ekran Çıktısı</b>
+        <h2>JavaScript Functions</h2>
+        Bu örnek, person1 üzerinde kullanarak kişinin fullName yöntemini çağırır:<br>
+        elif karaca<br>
+        <h2 style="color: rebeccapurple"> apply() Yöntemi</h2>
+        Apply () yöntemi, call () yöntemine benzer.<br>
+        <img src="../images/j16.png"><br>
+        <b style="color: green">Ekran Çıktısı</b>
+        seyma karaca<br>
+        <br>
+        <h2 style="color: rebeccapurple"> Call () ve Apply () Arasındaki Fark</h2>
+
+        Fark şu:<br>
+
+        Call () yöntemi bağımsız değişkenleri ayrı ayrı alır.<br>
+
+        Apply () yöntemi, bağımsız değişkenleri dizi olarak alır.<br>
+
+        Bağımsız değişken listesi yerine bir dizi kullanmak istiyorsanız, Apply () yöntemi çok kullanışlıdır.<br>
+        Math.max () yöntemini kullanarak en büyük sayıyı (sayı listesinden) bulabilirsiniz:<br>
+        <h2 style="color: rebeccapurple">Dizilerde Max Yöntemi Benzetme</h2>
+        <b style="color: rebeccapurple">Örnek</b><br>
+        <img src="../images/j17.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        Bu örnek, sayı bağımsız değişkenleri listesindeki en yüksek sayıyı döndürür:<br>
+
+        3<br>
+        <br>
+        <h2 style="color: rebeccapurple">Global Değişkenler</h2>
+        function myFunction() {<br>
+        var a = 4;<br>
+        document.getElementById("demo").innerHTML = a * a;<br>
+        }<br>
+        Aşağıdaki butona tıklandığında sonucun 16 olduğunu görebilirsiz!<br>
+
+        <button type="button" onclick="myFunction()">Click Me!</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var a = 4;
+                document.getElementById("demo").innerHTML = a * a;
+            }
+
+        </script>
+        <br>
+        Bir web sayfasında, global değişkenler pencere nesnesine aittir.<br>
+
+        Genel değişkenler sayfadaki (ve penceredeki) tüm komut dosyaları tarafından kullanılabilir (ve değiştirilebilir).<br>
+
+        Bir yerel değişken sadece tanımlandığı fonksiyonun içinde kullanılabilir. Diğer işlevlerden ve diğer komut dosyası kodlarından gizlenir.<br>
+
+        Aynı ada sahip genel ve yerel değişkenler farklı değişkenlerdir. Birini değiştirmek diğerini değiştirmez.<br><br>
+        <h2 style="color:rebeccapurple">JavaScript İç İçe İşlevler</h2>
+
+        Tüm işlevlerin global kapsama erişimi vardır.<br>
+
+        Aslında, JavaScript'te, tüm işlevlerin kendilerinin "üstündeki" kapsama erişimi vardır.<br>
+
+        JavaScript iç içe işlevleri destekler. Yuvalanmış işlevler, "üstte" olan kapsama erişebilir.<br>
+
+        Bu örnekte iç işlev plus (), üst işlevdeki sayaç değişkenine erişime sahiptir:<br><br>
+       /* function add() {<br>
+        var counter = 0;<br>
+        function plus() {counter += 1;}<br>
+        plus();<br>
+        return counter;<br>
+        } */<br>
+        Dışarıdan plus () işlevine erişebilseydik, bu karşı ikilemi çözebilirdi.<br>
+
+        Ayrıca counter = 0'ı yalnızca bir kez yürütmenin bir yolunu bulmamız gerekir.<br>
+
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonkullanimi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+            <li><a href="#">Fonksiyon Kullanımı</a></li>
+            <li><a href="nesne.html">Nesne Modeli ve Kullanım</a></li>
+            <li><a href="dom.html">Document Object Model</a></li>
+            <li><a href="alisverisRapor.html">Alışveriş Listesi Rapor</a></li>
+
+
+
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>
+/* <b style="color: green" >Örnek</b><br>
+
+*/

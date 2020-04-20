@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">DOCUMENT OBJECT MODEL</h1></center>
+        <P>
+            Bir web sayfası yüklendiğinde, tarayıcı sayfanın bir Belge Nesne Modeli oluşturur.<br>
+            HTML DOM modeli, bir Nesneler ağacı olarak oluşturulur:<br>
+            <img src="../images/js_90.png"><br>
+
+            Nesne modeliyle JavaScript, dinamik HTML oluşturmak için gereken tüm gücü alır:<br>
+
+            *JavaScript sayfadaki tüm HTML öğelerini değiştirebilir<br>
+            *JavaScript sayfadaki tüm HTML özelliklerini değiştirebilir<br>
+            *JavaScript sayfadaki tüm CSS stillerini değiştirebilir<br>
+            *JavaScript mevcut HTML öğelerini ve özelliklerini kaldırabilir<br>
+            *JavaScript yeni HTML öğeleri ve özellikleri ekleyebilir<br>
+            *JavaScript, sayfadaki mevcut tüm HTML etkinliklerine tepki verebilir<br>
+            *JavaScript sayfada yeni HTML etkinlikleri oluşturabilir<br>
+            <br><br>
+            <h2 style="color: rebeccapurple">DOM nedir?</h2>
+        *DOM, bir W3C (World Wide Web Consortium) standardıdır.<br>
+
+        *DOM, belgelere erişmek için bir standart tanımlar:<br>
+
+        "W3C Belge Nesne Modeli (DOM), programların ve komut dosyalarının bir belgenin içeriğine, yapısına ve
+        stiline dinamik olarak erişmesine ve güncellemesine olanak tanıyan platform ve dilden bağımsız bir arabirimdir."<br>
+
+        W3C DOM standardı 3 farklı parçaya ayrılmıştır:<br>
+
+        *Core DOM - tüm belge türleri için standart model<br>
+        *XML DOM - XML ​​belgeleri için standart model<br>
+        *HTML DOM - HTML belgeleri için standart model<br>
+        <br>
+
+        <h2 style="color: rebeccapurple">HTML DOM nedir?</h2>
+
+        HTML DOM, HTML için standart bir nesne modeli ve programlama arabirimidir. Şunu tanımlar:<br>
+
+        *Nesne olarak HTML öğeleri<br>
+        *Tüm HTML öğelerinin özellikleri<br>
+        *Tüm HTML öğelerine erişme yöntemleri<br>
+        *Tüm HTML öğeleri için etkinlikler<br>
+        *Başka bir deyişle: HTML DOM, HTML öğelerini alma, değiştirme, ekleme veya silme standardıdır.<br>
+        <br>
+
+        <b style="color: rebeccapurple">JavaScript - HTML DOM Yöntemleri</b>
+        HTML DOM yöntemleri, (HTML Elements'ta) gerçekleştirebileceğiniz eylemlerdir.
+
+        HTML DOM özellikleri, ayarlayabileceğiniz veya değiştirebileceğiniz değerlerdir (HTML Öğelerinin).<br>
+
+        <h2 style="color: rebeccapurple"> DOM Programlama Arayüzü</h2>
+
+        *HTML DOM'ye JavaScript (ve diğer programlama dilleri) ile erişilebilir.<br>
+
+        *DOM'de, tüm HTML öğeleri nesne olarak tanımlanır.<br>
+
+        *Programlama arayüzü, her nesnenin özellikleri ve yöntemleridir.<br>
+
+        *Özellik, alabileceğiniz veya ayarlayabileceğiniz bir değerdir (HTML öğesinin içeriğini değiştirmek gibi).<br>
+
+        *Yöntem, yapabileceğiniz bir eylemdir (HTML öğesi eklemek veya silmek gibi).<br>
+        <br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_91.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        <h2 >My First Page</h2>
+        Hello World!<br>
+        <br>
+        Bir HTML öğesine erişmenin en yaygın yolu, öğenin kimliğini kullanmaktır.
+        Yukarıdaki örnekte <b style="color: red"> getElementById</b> bir yöntem, <b style="color: red">innerHTML</b>  ise bir özelliktir.<br>
+
+       <h2 style="color: rebeccapurple">GetElementById Yöntemi</h2>
+        Bir HTML öğesine erişmenin en yaygın yolu, öğenin kimliğini kullanmaktır.<br>
+        Yukarıdaki örnekte <b style="color: red"> getElementById</b> yöntemi, öğeyi bulmak için<b style="color: red">id = "demo" </b>  kullanmıştır.<br>
+        <h2 style="color: rebeccapurple">innerHTML Özelliği</h2>
+
+        *Bir öğenin içeriğini almanın en kolay yolu innerHTML özelliğini kullanmaktır.<br>
+
+        *innerHTML özelliği, HTML öğelerinin içeriğini almak veya değiştirmek için kullanışlıdır.<br>
+
+        *innerHTML özelliği, html ve body dahil olmak üzere herhangi bir HTML öğesini almak veya değiştirmek için kullanılabilir.<br>
+
+        <h2 style="color: rebeccapurple">HTML DOM Belge Nesnesi</h2>
+
+        Belge nesnesi web sayfanızı temsil eder.
+
+        Bir HTML sayfasındaki herhangi bir öğeye erişmek istiyorsanız, her zaman belge nesnesine erişmeye başlarsınız.<br>
+
+        Aşağıda, HTML'ye erişmek ve bunları değiştirmek için belge nesnesini nasıl kullanabileceğinize ilişkin bazı örnekler verilmiştir.<br>
+
+       <h2 style="color: rebeccapurple"> HTML Öğelerini Bulma</h2>
+        <br><table>
+        <tr>
+            <th><b >yöntem</b></th>
+            <th><b>Açıklama</b></th>
+        </tr>
+        <tr>
+            <td>document.getElementById(id)</td>
+            <td>     Öğe kimliğine göre öğe bulma </td>
+        </tr>
+        <tr>
+            <td>document.getElementsByTagName(name)</td>
+            <td>
+                Etiketleri adıyla öğeleri bulma</td>
+        </tr>
+        <tr>
+            <td>document.getElementsByClassName(name)</td>
+            <td>Sınıf adına göre öğeleri bulma</td>
+        </tr>
+    </table>
+        <br>
+        <br>
+
+        <h2 style="color: rebeccapurple">HTML Öğelerini Değiştirme</h2>
+        <br><table>
+        <tr>
+            <th><b >yöntem</b></th>
+            <th><b>Açıklama</b></th>
+        </tr>
+        <tr>
+            <td>element.innerHTML =  new html content	</td>
+            <td>     Bir öğenin iç HTML'sini değiştirme </td>
+        </tr>
+        <tr>
+            <td>element.attribute = new value</td>
+            <td>
+
+                HTML öğesinin özellik değerini değiştirme</td>
+        </tr>
+        <tr>
+            <td>element.style.property = new style</td>
+            <td>
+                HTML öğesinin stilini değiştirme</td>
+        </tr>
+        <tr>
+            <td>element.setAttribute(attribute, value)</td>
+            <td>
+                HTML öğesinin özellik değerini değiştirme</td>
+        </tr>
+    </table>
+<br>
+       <h2 style="color: rebeccapurple"> Eleman Ekleme ve Silme</h2>
+        <br><table>
+        <tr>
+            <th><b >yöntem</b></th>
+            <th><b>Açıklama</b></th>
+        </tr>
+        <tr>
+            <td>document.createElement(element)	</td>
+            <td>    HTML öğesi oluşturma</td>
+        </tr>
+        <tr>
+            <td>document.removeChild(element)</td>
+            <td>
+
+
+                HTML öğesini kaldırma</td>
+        </tr>
+        <tr>
+            <td>document.appendChild(element)</td>
+            <td>
+
+                HTML öğesi ekle</td>
+        </tr>
+        <tr>
+            <td>document.replaceChild(new, old)</td>
+            <td>
+                HTML öğesini değiştirme</td>
+        </tr>
+        <tr>
+            <td>document.write(text)</td>
+            <td>
+
+                HTML çıktı akışına yazma</td>
+        </tr>
+    </table>
+        <br>
+
+        <h2 style="color: rebeccapurple"> Olay İşleyicileri Ekleme</h2>
+        <br>
+          document.getElementById(id).onclick = function(){code} --> Bir onclick etkinliğine olay işleyici kodu ekleme
+<br>
+        <h2 style="color: rebeccapurple">HTML Öğelerini Bulma</h2>
+
+        Genellikle JavaScript ile HTML öğelerini değiştirmek istersiniz.
+
+        Bunu yapmak için önce elemanları bulmalısınız. Bunu yapmanın birkaç yolu vardır:<br>
+
+        *HTML öğelerini kimliğe göre bulma<br>
+        *Etiket adına göre HTML öğeleri bulma<br>
+        *Sınıf adına göre HTML öğeleri bulma<br>
+        *CSS seçicileri ile HTML öğeleri bulma<br>
+        *HTML nesnesi koleksiyonlarına göre HTML öğelerini bulma<br>
+        <br>
+
+        <h2 style="color: rebeccapurple">Kimliğe Göre HTML Öğesi Bulma</h2>
+        DOM'de bir HTML öğesi bulmanın en kolay yolu, öğe kimliğini kullanmaktır.
+
+        Bu örnek <b style="color: red"> id = "intro"</b> olan öğeyi bulur:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_93.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        <h2 >Kimliğe Göre HTML Öğelerini Bulma</h2>
+        Hello World!<br>
+
+        bu örnek getElementsById metodu için.<br>
+
+        Giriş paragrafındaki metin Hello World!<br>
+
+        Öğe bulunursa, yöntem öğeyi nesne olarak döndürür (myElement öğesinde).
+
+        Öğe bulunamazsa, myElement öğesi null içerir.<br>
+
+        <h2 style="color: rebeccapurple">Sınıf Adına Göre HTML Öğelerini Bulma</h2>
+
+        Aynı sınıf adına sahip tüm HTML öğelerini bulmak istiyorsanız, <b style="color: red"> getElementsByClassName ()</b> öğesini kullanın.
+        Bu örnek, <b style="color: red"> class = "intro"</b> içeren tüm öğelerin bir listesini döndürür.<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_94.png"><br>
+        <h2 >Sınıf Adına Göre HTML Öğelerini Bulma</h2>
+        Hello World!<br>
+        DOM çok kullanışlı.<br>
+        bu örnek getElementsByClassName metodu için.<br>
+        The first paragraph (index 0) with class="intro": DOM çok kullanışlı.<br>
+        <h2 style="color: rebeccapurple">CSS Seçicileri ile HTML Öğeleri Bulma</h2>
+        Belirli bir CSS seçicisiyle eşleşen tüm HTML öğelerini (id, sınıf adları, türleri, öznitelikleri, öznitelik değerleri, vb.)
+        Bulmak istiyorsanız, querySelectorAll () yöntemini kullanın. Bu örnek, <b style="color: red"> class = "intro"</b> içeren tüm
+        öğelerinin bir listesini döndürür<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_95.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        <h2 >Finding HTML Elements by Query Selector</h2>
+        Hello World!<br>
+
+        The DOM is very useful.<br>
+
+        This example demonstrates the querySelectorAll method.<br>
+
+        The first paragraph (index 0) with class="intro": The DOM is very useful.<br>
+
+        <h2 style="color: rebeccapurple"> HTML Çıktı Akışını Değiştirme</h2>
+        JavaScript dinamik HTML içeriği oluşturabilir:<br>
+
+        Tarih: Sal 07 Nisan 2020 01:07:57 GMT + 0300 (GMT + 03: 00)<br>
+
+        JavaScript'te, document.write () yöntemi doğrudan HTML çıktı akışına yazmak için kullanılabilir:<br>
+
+        <h2 style="color: rebeccapurple">HTML İçeriğini Değiştirme</h2>
+
+        Bir HTML öğesinin içeriğini değiştirmenin en kolay yolu innerHTML özelliğini kullanmaktır.<br>
+
+        Bir HTML öğesinin içeriğini değiştirmek için şu sözdizimini kullanın:<br>
+
+        document.getElementById (id) .innerHTML = new HTML<br>
+        <br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_96.png"> <br>
+        <b style="color: green "> Ekran Çıktısı</b><br>
+        <h2> JavaScript can Change HTML</h2>
+        New text!<br>
+        The paragraph above was changed by a script.<br>
+        <br>
+
+        Yukarıdaki HTML belgesi, id = "p1" olan bir p öğesi içeriyor<br>
+        İd = "p1" olan öğeyi almak için HTML DOM kullanıyoruz<br>
+        JavaScript, o öğenin içeriğini (innerHTML) "Yeni metin!"<br>
+        <h2 style="color: rebeccapurple">Bir Özelliğin Değerini Değiştirme</h2>
+        Bir HTML özelliğinin değerini değiştirmek için şu sözdizimini kullanın:<br>
+
+        document.getElementById (id) .attribute =new değer<br>
+        <br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_97.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        <img src="../images/landscape.jpg"><br>
+        The original image was smiley.gif, but the script changed it to landscape.jpg<br>
+
+        Yukarıdaki HTML belgesi, id = "myImage" içeren bir img öğesi içeriyor
+        İd = "myImage" ile öğe almak için HTML DOM kullanıyoruz
+        JavaScript bu öğenin src özelliğini "smiley.gif" yerine "landscape.jpg" olarak değiştirir.<br>
+       <h2 style="color: rebeccapurple">HTML Stilini Değiştirme</h2>
+        <br>
+        Bir HTML öğesinin stilini değiştirmek için şu sözdizimini kullanın:<br>
+
+        document.getElementById(id).style.property = new style <br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/js_98.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        Hello World!<br>
+        <h2 style="color: blue">Hello World!</h2>
+        Paragrf kod ile değiştirildi.<br>
+       <h2 style="color: rebeccapurple">Olayları Kullanma</h2>
+        HTML DOM, bir olay meydana geldiğinde kod yürütmenize olanak tanır.
+        Etkinlikler, HTML öğelerinde "bir şeyler olduğunda" tarayıcı tarafından oluşturulur:<br>
+        Bir öğe tıklandı<br>
+        Sayfa yüklendi<br>
+        Giriş alanları değiştirildi<br>
+        Bu öğreticinin bir sonraki bölümünde olaylar hakkında daha fazla bilgi edineceksiniz.<br>
+        <br>
+        Buton ekleyerek bir örnek yapalım Öncelikle kodun ekran görüntüsünü ekleyelim<br>
+        <img src="../images/js_99.png">
+        <h1 id="id1">My Heading 1</h1>
+        <button type="button"
+                onclick="document.getElementById('id1').style.color = 'red'">
+            Click Me!</button><br>
+
+        <h2 style="color: rebeccapurple">JavaScript HTML DOM Animasyonu</h2>
+
+       <b style="color: rebeccapurple">Temel Bir Web Sayfası</b>
+        JavaScript ile HTML animasyonlarının nasıl oluşturulacağını göstermek için basit bir web sayfası kullanacağız:<br>
+        <img src="../images/js_100.png"><br>
+
+        <h2 style="color: rebeccapurple">Animasyon Kabı Oluşturma</h2>
+
+        Tüm animasyonlar bir kapsayıcı öğeye göre olmalıdır.<br>
+        <img src="../images/j1.png"><br>
+
+        <h2 style="color: rebeccapurple">Öğelere Stil Verme</h2>
+        Kap öğesi, <b style="color: red">style = "position: relative"</b> ile oluşturulmalıdır.<br>
+        Animasyon öğesi  <b style="color: red">style = "position:  absolute"</b> ile oluşturulmalıdır.<br>
+        Örneğimizin Ekran Görüntüsü:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j2.png"><br>
+        <b style="color:green">Ekran Çıktısı:</b>
+
+        <style>
+            #container {
+                width: 400px;
+                height: 400px;
+                position: relative;
+                background: yellow;
+            }
+            #animate {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background: red;
+            }
+        </style>
+        <body>
+
+        <h2>My First JavaScript Animation</h2>
+
+        <div id="container">
+            <div id="animate"></div>
+        </div>
+        </body>
+
+        <h2 style="color:rebeccapurple ">Animasyon Kodu</h2>
+        JavaScript animasyonları, bir öğenin stilindeki kademeli değişiklikleri programlayarak yapılır.
+
+        Değişiklikler bir zamanlayıcı tarafından çağrılır. Zamanlayıcı aralığı küçük olduğunda, animasyon sürekli görünür.<br>
+        <b style="color: blue">var</b>  id = setInterval(frame, 5);<br>
+
+        <b style="color: blue">function </b> frame() {<br>
+        <b style="color: blue">if</b>  (/* test for finished */) {<br>
+        clearInterval(id);<br>
+        }<b style="color: blue">else</b> {<br>
+        /* code to change the element style */<br>
+        }<br>
+        }<br>
+
+        <h2 style="color: rebeccapurple"> JavaScript HTML DOM Etkinlikleri</h2>
+
+        Bir kullanıcı bir HTML öğesini tıkladığında olduğu gibi bir etkinlik gerçekleştiğinde JavaScript yürütülebilir.
+
+        Kullanıcı bir öğeyi tıkladığında kod yürütmek için bir HTML olay özelliğine JavaScript kodu ekleyin:<br>
+
+        onclick = JavaScript<br>
+
+        HTML olaylarına örnekler:<br>
+
+       * Bir kullanıcı fareyi tıkladığında<br>
+       * Bir web sayfası yüklendiğinde<br>
+       * Bir resim yüklendiğinde<br>
+       * Fare bir öğenin üzerine geldiğinde<br>
+       * Bir giriş alanı değiştirildiğinde<br>
+       * Bir HTML formu gönderildiğinde<br>
+       * Bir kullanıcı bir tuşa bastığında<br>
+        <br>
+        <b style="color: green"></b><br>
+        <b style="color: blue"> onclick</b>="<b style="color: blue">this</b>.innerHTML='Ooops!'">Bu metne tıklayınız!<br>
+        komutuyla aşağıdaki animasyonu elde edebiliyoruz...
+        <h1 onclick="this.innerHTML='Ooops!'">Bu metne tıklayınız!</h1><br>
+
+        <h2 style="color: rebeccapurple"> HTML Olay Özellikleri</h2>
+
+        HTML öğelerine olay atamak için olay niteliklerini kullanabilirsiniz.<br>
+        örneğin saati tarihi gösteren bir örnek yapalım!<br>
+
+        <p>Butona basarak tarihi görebilirsiniz.</p>
+
+        <button onclick="displayDate()">The time is?</button>
+
+        <script>
+            function displayDate() {
+                document.getElementById("demo_").innerHTML = Date();
+            }
+        </script>
+
+        <p id="demo_"></p>
+
+        <h2 style="color: rebeccapurple">Onload ve Onunload Olayları</h2>
+        Kullanıcı sayfaya girdiğinde veya sayfadan ayrıldığında onload ve onunload olayları tetiklenir.<br>
+        Onload olayı, ziyaretçinin tarayıcı türünü ve tarayıcı sürümünü kontrol etmek ve bilgilere dayanarak web
+        sayfasının uygun sürümünü yüklemek için kullanılabilir.
+        Onload ve onunload olayları çerezlerle uğraşmak için kullanılabilir.<br>
+
+        <h2 style="color: rebeccapurple"> Değişim Etkinliği</h2>
+
+        Onchange olayı genellikle giriş alanlarının doğrulanmasıyla birlikte kullanılır.
+
+        Aşağıda onchange'in nasıl kullanılacağına dair bir örnek verilmiştir.
+        Kullanıcı giriş alanının içeriğini değiştirdiğinde upperCase () işlevi çağrılır.<br>
+        <b style="color: blue"> x.value = x.value.toUpperCase();</b> komutuyla kullanıcı giriş içeriği oluşturulur.<br>
+        <br>
+        <h2 style="color: rebeccapurple">onmouseover and onmouseout </h2>
+
+        onmouseover and onmouseout kullanıcı bir HTML öğesinin üzerine geldiğinde veya bu öğeden çıktığında bir işlevi tetiklemek için
+        kullanılabilir:<br>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+             style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+            Mouse Over Me</div>
+
+        <script>
+            function mOver(obj) {
+                obj.innerHTML = "Thank You"
+            }
+
+            function mOut(obj) {
+                obj.innerHTML = "Mouse Over Me"
+            }
+        </script>
+        <br>
+        <b style="color: black">onmouseover="mOver(this)" onmouseout="mOut(this)"
+            style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+            Mouse Over Me</b>
+        <br>
+        Kod içerisinde böyle kullarak işlev tetiklenir.<br>
+        <h2 style="color: rebeccapurple">addEventListener()</h2>
+
+        Kullanıcı bir düğmeyi tıkladığında tetiklenen bir olay dinleyicisi ekleyin:<br>
+
+        <button id="myBtn">Try it</button>
+
+        <p id="d"></p>
+
+        <script>
+            document.getElementById("myBtn").addEventListener("click", displayDate);
+
+            function displayDate() {
+                document.getElementById("d").innerHTML = Date();
+            }
+        </script>
+        <br>
+       <b style="color: black"> document.getElementById("myBtn").addEventListener("click", displayDate);<br>
+        function displayDate() {<br>
+        document.getElementById("demo").innerHTML = Date();<br></b>
+        Kodu eklenerek oluşturulur.<br>
+        <br>
+
+        <b style="color: red">AddEventListener ()</b>  yöntemi, belirtilen öğeye bir olay işleyicisi ekler.<br>
+
+        <b style="color: red">AddEventListener ()</b>  yöntemi, var olan olay işleyicilerinin üzerine yazmadan bir öğeye bir olay işleyicisi ekler.<br>
+
+        Bir öğeye birçok olay işleyici ekleyebilirsiniz.<br>
+
+        Bir öğeye aynı türden birçok olay işleyici ekleyebilirsiniz, yani iki "tıklama" olayı<br>
+
+        Olay dinleyicilerini yalnızca HTML öğelerine değil, herhangi bir DOM nesnesine ekleyebilirsiniz. yani pencere nesnesi.<br>
+
+        <b style="color: red">AddEventListener ()</b>  yöntemi, olayın köpürmeye nasıl tepki vereceğini kontrol etmeyi kolaylaştırır.<br>
+
+        <b style="color: red">AddEventListener ()</b>  yöntemini kullanırken, daha iyi okunabilirlik için JavaScript HTML işaretlemesinden ayrılır
+        ve HTML işaretlemesini denetlemeseniz bile olay dinleyicileri eklemenize olanak tanır.<br>
+
+        <b style="color: red">AddEventListener ()</b>  yöntemini kullanarak bir olay dinleyicisini kolayca kaldırabilirsiniz.<br><br>
+        <h2 style="color: rebeccapurple">Syntax</h2>
+        element.addEventListener(event, function, useCapture);<br>
+
+        İlk parametre, etkinliğin türüdür ("tıklama" veya "fareyle üzerine gelme" veya başka bir HTML DOM Etkinliği gibi).<br>
+
+        İkinci parametre, olay meydana geldiğinde çağırmak istediğimiz işlevdir.<br>
+
+        Üçüncü parametre, olay köpürme mi yoksa olay yakalama mı kullanılacağını belirten bir boole değeridir. Bu parametre isteğe bağlıdır.<br>
+
+        Etkinlik için "on" önekini kullanmadığınızı unutmayın; <b style="color: red"> "onclick"</b> yerine <b style="color: red">"click" </b>
+        kullanın.<br>
+        <br>
+
+        <h2 style="color: rebeccapurple">Bir Elemana Olay İşleyici Ekleme</h2>
+        Sayfamıza uyarı mesajı vermek için tıklayın<br>
+
+        <button id="buton">Try it</button>
+
+        <script>
+            document.getElementById("buton").addEventListener("click", function() {
+                alert("Selam Güzel İnsanlar!");
+            });
+        </script>
+        <h2 style="color: rebeccapurple">Aynı Öğeye Birçok Olay İşleyicisi Ekleme</h2>
+
+        AddEventListener () yöntemi, mevcut öğelerin üzerine yazmadan aynı öğeye birçok olay eklemenize olanak tanır:<br>
+        <button id="Btn">Try it</button>
+
+        <script>
+            var x = document.getElementById("Btn");
+            x.addEventListener("click", myFunction);
+            x.addEventListener("click", someOtherFunction);
+
+            function myFunction() {
+                alert ("Hello World!");
+            }
+
+            function someOtherFunction() {
+                alert ("This function was also executed!");
+            }
+        </script>
+        <br>
+
+        <h2 style="color: rebeccapurple"> Pencere Nesnesine Olay İşleyicisi Ekleme</h2>
+
+        AddEventListener () yöntemi, HTML öğeleri, HTML belgesi, pencere nesnesi veya xmlHttpRequest nesnesi gibi olayları
+        destekleyen diğer nesneler gibi herhangi bir HTML DOM nesnesine olay dinleyicisi eklemenize olanak tanır.<br>
+        <h2 style="color: rebeccapurple">Geçiş Parametreleri</h2>
+
+        Parametre değerlerini iletirken, belirtilen işlevi parametrelerle çağıran bir "anonim işlev" kullanın:<br>
+        <button id="my_Btn">Try it</button>
+
+        <p id="dem"></p>
+
+        <script>
+            var p1 = 5;
+            var p2 = 7;
+
+            document.getElementById("my_Btn").addEventListener("click", function() {
+                myFunction(p1, p2);
+            });
+
+            function myFunction(a, b) {
+                var result = a * b;
+                document.getElementById("dem").innerHTML = result;
+            }
+        </script><br>
+        Yukarıdakı butonda yapılan işlemin kodu:<br>
+       <b style="color: black"> var p1 = 5;<br>
+        var p2 = 7;<br>
+
+        document.getElementById("my_Btn").addEventListener("click", function() {<br>
+        myFunction(p1, p2);<br>
+        });<br>
+
+        function myFunction(a, b) {<br>
+        var result = a * b;<br>
+        document.getElementById("dem").innerHTML = result;</b><br>
+        <br>
+        <h2 style="color: rebeccapurple">Event Bubbling ya da Event Capturing</h2>
+
+        Olay yayılımı, bir olay meydana geldiğinde öğe sırasını tanımlamanın bir yoludur.
+        Bir div öğesinin içinde p öğeniz varsa ve kullanıcı p öğesini tıklarsa, önce hangi öğenin "click" olayı işlenmelidir?<br>
+
+        Bubling işleminde iç öğenin çoğunun olayı önce işlenir, ardından dış:
+        önce p öğesinin tıklama olayı, daha sonra div öğesinin tıklama olayı işlenir.<br>
+
+        Dıştaki çoğu öğenin etkinliğini yakalamada önce iç, ardından iç: önce div öğesinin tıklama olayı,
+        sonra p öğesinin tıklama olayı işlenir.<br>
+
+
+        <h2 style="color:rebeccapurple ">JavaScript HTML DOM Gezinme</h2>
+        <img src="../images/j3.png"><br>
+        HTML DOM ile, düğüm ağacındaki tüm düğümlere JavaScript ile erişilebilir.
+
+        Yeni düğümler oluşturulabilir ve tüm düğümler değiştirilebilir veya silinebilir.<br>
+
+        <b style="color: rebeccapurple"> Düğüm İlişkileri</b><br>
+
+        Düğüm ağacındaki düğümlerin birbirleriyle hiyerarşik bir ilişkisi vardır.<br>
+
+        Ebeveyn, çocuk ve kardeş terimleri ilişkileri tanımlamak için kullanılır.<br>
+
+        <b> *</b>Bir düğüm ağacında, üst düğüme kök (veya kök düğüm) denir.<br>
+        <b> *</b>Kök (üst öğesi olmayan) hariç her düğümün tam olarak bir üst öğesi vardır.<br>
+        <b> *</b>Bir düğümün birkaç çocuğu olabilir.<br>
+        <b> *</b>Kardeşler (erkek veya kız kardeşler) aynı ebeveyne sahip düğümlerdir.<br>
+        <img src="../images/j4.png"><br>
+<br>
+        Yukarıdaki HTML'den şunları okuyabilirsiniz:<br>
+
+        <b > html </b>kök düğümdür<br>
+        <b > html </b> ebeveynleri yok<br>
+        <b > html </b>, <b>head </b>ve <b>body</b><br>
+        <b>head </b> <b> html </b>'nin ilk çocuğu<br>
+        <b>body</b> <b> html </b>'nin son çocuğu<br><br>
+        ve:<br>
+        <br>
+        <b>head </b> bir çocuğu var: <b>title</b><br>
+        <b>title</b> bir alt öğeye (metin düğümü) sahiptir: "DOM Eğitimi"<br>
+        <b>body</b> 'in iki çocuğu vardır: <b>h1</b> ve<b>p</b><br>
+        <b>h1</b> bir çocuğu var: "DOM Birinci Ders"<br>
+        <b>p</b>  bir çocuğu var: "Merhaba dünya!"<br>
+        <b>h1</b> ve<b>p</b>  kardeşler<br>
+        <br>
+        <h2 style="color: rebeccapurple">Alt Düğümler ve Düğüm Değerleri</h2>
+        "DOM Tutorial" değerine sahip bir metin düğümü içerir.
+        Metin düğümünün değerine düğümün innerHTML özelliği tarafından erişilebilir.<br>
+       <b style="color: blue"> var</b> myTitle = document.getElementById("demo").innerHTML;<br>
+        <br>
+        İnnerHTML özelliğine erişmek, ilk alt öğenin nodeValue değerine erişmekle aynıdır:<br>
+        <b style="color: blue"> var</b> myTitle = document.getElementById("demo").firstChild.nodeValue;<br>
+        <br>
+
+        İlk çocuğa erişim şu şekilde de yapılabilir:<br>
+        <b style="color: blue"> var</b>  myTitle = document.getElementById("demo").childNodes[0].nodeValue;<br>
+        <br>
+        <h2 style="color: rebeccapurple">InnerHTML</h2>
+
+        Bu öğreticide, bir HTML öğesinin içeriğini almak için innerHTML özelliğini kullanıyoruz.
+
+        Bununla birlikte, yukarıdaki diğer yöntemleri öğrenmek, ağaç yapısını ve DOM'un gezinmesini anlamak için yararlıdır.<br>
+        <h2 style="color: rebeccapurple">DOM Kök Düğümleri</h2>
+        Tam belgeye erişime izin veren iki özel özellik vardır:<br>
+        <b style="color: red" > document.body</b> - Gövdesi<br>
+        <b style="color: red">document.documentElement</b>  -Tamamı<br>
+        <br>
+        <h2 style="color: rebeccapurple"> NodeName Özelliği</h2>
+
+        NodeName özelliği, bir düğümün adını belirtir.<br>
+        *nodeName salt okunur<br>
+        *Bir eleman düğümünün node adı, etiket adıyla aynıdır<br>
+        *Bir özniteliğin düğüm adı Düğüm öznitelik adıdır<br>
+        *Bir metin düğümünün adı her zaman #text'dir<br>
+        *nodeNot düğümü adı her zaman #document<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j5.png"><br>
+        <b style="color: red">Not:</b>  nodeName her zaman bir HTML öğesinin büyük harfli etiket adını içerir.<br>
+
+        <h2 style="color: rebeccapurple">NodeValue Özelliği</h2>
+        *NodeValue özelliği, bir düğümün değerini belirtir.<br>
+        *Öğe düğümleri için nodeValue null<br>
+        *Metin düğümleri için nodeValue metnin kendisidir<br>
+        *Özellik düğümleri için nodeValue, özellik değeridir<br>
+        <b style="color: rebeccapurple"> NodeType Özelliği</b>
+        NodeType özelliği salt okunurdur. Bir düğümün türünü döndürür.<br>
+
+        <h2 style="color: rebeccapurple">Yeni HTML Öğeleri (Düğümler) Oluşturma</h2>
+        HTML DOM'ye yeni bir öğe eklemek için, önce öğeyi (öğe düğümü) oluşturmanız ve ardından varolan bir öğeye eklemeniz gerekir.<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j6.png"><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        This is a paragraph.<br>
+        This is another paragraph.<br>
+        This is new.<br>
+
+        <b style="color: rebeccapurple">Yeni HTML Öğeleri Oluşturma - insertBefore ()</b><br>
+        insertBefore ()yöntemini kullanabilirsiniz.<br>
+        element.insertBefore(para,child);<br>
+        <h2 style="color: rebeccapurple"> Alt Düğümü Kaldırma</h2>
+        Remove () yöntemini desteklemeyen tarayıcılarda, bir öğeyi kaldırmak için üst düğümü bulmanız gerekir:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j7.png"><br>
+        <b style="color: green">Ekran Çıktısı</b>
+        This is another paragraph.<br>
+
+        <h2 style="color: rebeccapurple">HTML Öğelerini Değiştirme</h2>
+        HTML Öğelerini Değiştirme<br>
+        Bir öğeyi HTML DOM ile değiştirmek için replaceChild () yöntemini kullanın: <br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j8.png"><br>
+        <b style="color: green">Ekran Çıktısı</b>
+        This is new.<br>
+        This is another paragraph.<br>
+
+        <h2 style="color: rebeccapurple">HTMLCollection Nesnesi</h2>
+        GetElementsByTagName () yöntemi bir HTMLCollection nesnesi döndürür.
+        HTMLCollection nesnesi, HTML öğelerinin dizi benzeri bir listesidir (koleksiyon).
+        Aşağıdaki kod bir belgedeki tüm p öğelerini seçer:<br>
+
+        <b style="color: blue">var</b>  x = document.getElementsByTagName ("p");<br>
+        The elements in the collection can be accessed by an index number.<br>
+        To access the second <p> element you can write:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j9.png"><br>
+        <b style="color: green">Ekran Çıktısı</b>
+        <h2> JavaScript HTML DOM</h2>
+        Hello World!<br>
+        Hello Norway!<br>
+        The innerHTML of the second paragraph is: Hello Norway!<br>
+
+        <b style="color: blue"> Not:</b> Dizin 0'dan başlar.<br>
+        <br>
+        <h2 style="color: rebeccapurple"> HTML HTMLColeksiyon Uzunluğu</h2>
+
+        Length özelliği, bir HTMLCollection öğesindeki öğe sayısını tanımlar:<br>
+        <img src="../images/j10.png"><br>
+        <h2 style="color: rebeccapurple">JavaScript HTML DOM</h2>
+        Hello World!<br>
+
+        Hello Norway!<br>
+
+        This document contains 3 paragraphs.<br>
+
+        Tüm p öğelerinden oluşan bir koleksiyon oluşturun
+        1-Koleksiyonun uzunluğunu görüntüleme
+        2-Length özelliği, bir koleksiyondaki öğeler arasında döngü yapmak istediğinizde yararlıdır<br>
+        <br>
+       <h2 style="color: rebeccapurple"> HTML DOM NodeList Object</h2>
+
+        Bir NodeList nesnesi, bir belgeden çıkarılan düğümlerin listesidir (koleksiyon).<br>
+
+        Bir NodeList nesnesi neredeyse bir HTMLCollection nesnesiyle aynıdır.<br>
+
+        Bazı (eski) tarayıcılar getElementsByClassName () gibi yöntemler için HTMLCollection yerine bir NodeList nesnesi döndürür.<br>
+
+        Tüm tarayıcılar, childNodes özelliği için bir NodeList nesnesi döndürür.<br>
+
+        Çoğu tarayıcı querySelectorAll () yöntemi için bir NodeList nesnesi döndürür.<br>
+
+        Aşağıdaki kod, bir belgedeki tüm p düğümlerini seçer:<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j11.png"><br><br>
+        <b style="color: green">Ekran Çıktısı</b><br>
+        <h2 >JavaScript HTML DOM!</h2>
+        Hello World!<br>
+        Hello Norway!<br>
+        The innerHTML of the second paragraph is: Hello Norway!<br>
+        <br>
+        <b style="color: blue">var</b>  myNodeList = document.querySelectorAll("p");<br><br>
+
+        <h2 style="color: rebeccapurple">HTML DOM NodeList Uzunluğu</h2>
+        Length özelliği, bir düğüm listesindeki düğüm sayısını tanımlar<br>
+        <b style="color: green">Örnek</b><br>
+        <img src="../images/j12.png"><br>
+        <b style="color: green">Ekran Çıktısı:</b><br>
+        <h2>JavaScript HTML DOM!</h2>
+        Hellow World!<br>
+        Hellow Norway!<br>
+        This document contains 3 paragraphs.<br>
+        <br>
+        Length özelliği, bir düğüm listesindeki düğümler arasında döngü yapmak istediğinizde yararlıdır<br>
+
+        <h2 style="color: rebeccapurple">HTMLCollection ve NodeList Arasındaki Fark</h2>
+        <b>*</b>HTMLCollection (önceki bölüm), HTML öğelerinin bir koleksiyonudur.<br>
+
+        <b>*</b>NodeList, belge düğümlerinin bir koleksiyonudur.<br>
+
+        <b>*</b>Bir NodeList ve bir HTML koleksiyonu aynı şeydir.<br>
+
+        <b>*</b>Hem HTMLCollection nesnesi hem de NodeList nesnesi, nesnelerin dizi benzeri bir listesidir (koleksiyon).<br>
+
+        <b>*</b>Her ikisinin de listedeki (koleksiyon) öğe sayısını tanımlayan bir length özelliği vardır.<br>
+
+        <b>*</b>Her ikisi de bir dizi gibi her öğeye erişmek için bir dizin (0, 1, 2, 3, 4, ...) sağlar.<br>
+
+        <b>*</b>HTMLColeksiyon öğelerine adlarına, kimliklerine veya dizin numaralarına erişilebilir.<br>
+
+        <b>*</b>NodeList öğelerine yalnızca dizin numaralarıyla erişilebilir.<br>
+
+        <b>*</b>Yalnızca NodeList nesnesi öznitelik düğümleri ve metin düğümleri içerebilir.<br>
+
+        </P>
+
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+            <li><a href="fonksiyonkullanimi.html">Fonksiyon Kullanımı</a></li>
+            <li><a href="nesne.html">Nesne Modeli ve Kullanım </a></li>
+            <li><a href="#">Document Object Model</a></li>
+            <li><a href="alisverisRapor.html">Alışveriş Listesi Rapor</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!Doctype>
+<html>
+<head>
+    <meta charset="utf-8">
+    <h1>İŞ BAŞVURU FORMU</h1>
+    <link href="../../css/kullaniciFormu.css" rel="stylesheet">
+
+</head>
+</body>
+</head>
+<body>
+<form name="kisi">
+    <table>
+        <tr>
+            <td>Ad</td>
+            <td><input type="text" name="ad" /></td>
+        </tr>
+        <br>
+        <td>Soyad</td>
+        <td><input type="text" name="soyad" /></td>
+        </tr>
+        <br>
+        <td>TC Kimlik</td>
+        <td><input type="text" name="tc" /></td>
+        </tr>
+        <br>
+        <td>Telefon</td>
+        <td><input type="text" name="tel" /></td>
+        </tr>
+        <br>
+        <td>E-posta</td>
+        <td><input type="text"  name="posta" /></td>
+        </tr>
+        <br>
+        <td>Adres</td>
+        <td><input type="text" name="adres" /></td>
+        </tr>
+        <br>
+        <td>Şehir</td>
+        <td><input type="text" name="sehir" /></td>
+        </tr>
+        <br>
+        <td>Meslek</td>
+        <td><input type="text" name="meslek" /></td>
+        </tr>
+        <br>
+        <tr>
+            <td>Doğum Yılı</td>
+            <td><select name="yıl">
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+            </select></td>
+            </select>
+            </td>
+            </tr>
+            <td>Cinsiyet</td>
+            <td><input type="radio" name="cinsiyet" value="Kız" />Kız
+                <input  name="cinsiyet" type="radio" value="Erkek" />Erkek</td>
+        </tr>
+        <tr>
+        <tr>
+        <tr>
+            <td colspan="2" align="center" ><input type="reset" value="Temizle" />
+                <input type="button" value="Gönder" onclick="gonder()" />
+            </td>
+        </tr>
+    </table>
+</form>
+<script src="../../js/kullaniciFormu.js"></script>
+</body>
+</html>

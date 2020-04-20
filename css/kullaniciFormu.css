@@ -1,0 +1,11 @@
+body{
+    background-color:#90A4AE;
+    font-family: "Arial Black";
+    width: 1100px;
+    margin:80px auto;
+    background-attachment: fixed;
+}
+h1{
+    color:black;
+    font-size: 30px;
+}

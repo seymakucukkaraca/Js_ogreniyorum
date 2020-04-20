@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color:rebeccapurple">ALIŞVERİŞ LİSTESİ RAPOR</h1></center>
+        <p>
+            <b >Alışveriş Listemizde yaptığımız JavaScript kodumuzu elimizden geldiği kadarıyla açıklamaya çalışacağız:</b>
+            <br>
+            <br>
+            <b style="color:rebeccapurple">Atama işlemimizi yapıyoruz ki ürünleri ekleyip çıkarabilelim:</b>
+            <br>
+            <br>
+            var itemId = 0; <br>
+            <br>
+            <b style="color: rebeccapurple">Eklenen bütün ürünlerin tek bir butonla silinmesi için hepsini sil fonksiyonunu oluşturuyoruz:</b>
+            <br>
+            <b style="color: blue">function</b>  hepsiniSil() {<br>
+            <br>
+            <b style="color: rebeccapurple"> Document Nesnesinin içeriğini değiştirmek ya da yeni bir içerik girmek
+            amacıyla <b>innerHTML</b> kullanılır:</b><br>
+            <br>
+            document.getElementById("urunler").innerHTML = "";<br>
+            }<br>
+            <b style="color: rebeccapurple">Listemize  eklenen ürünlerin çıkarılması için remove komutunu kullandık:</b><br>
+            <br>
+            <b style="color: blue">function</b> elemanSil(id) {<br>
+            <br>
+            document.getElementById(id).remove();<br>
+            }<br>
+            <br>
+            <b style="color: rebeccapurple">Ürün eklemek için bir ekle fonksiyonu oluşturuyoruz:</b><br>
+            <br>
+            <b style="color: blue">function</b> ekle() {<br>
+            <br>
+            <b style="color: rebeccapurple"> ürünün deger ataması gerçekleşti:</b><br>
+            <br>
+            var urun = document.getElementById("urunItem").value;<br>
+            <br>
+            <b style="color: rebeccapurple">Madde işaretlerini koymak için <b style="color: black">li</b> komutunu kullandık:</b><br>
+            <br>
+            var liste = document.createElement("li");<br>
+            <br>
+            <b style="color: rebeccapurple">İlk satır item'ın id sini alıyor kullanmak üzere: </b><br>
+            <br>
+            liste.id = itemId;<br>
+            <br>
+            <b style="color: rebeccapurple">Listenin yazı kısmını "ürün"deki bilgiyle aynı yapıyor:</b><br>
+            <br>
+            liste.innerHTML=urun;<br>
+            <br>
+            <b style="color: rebeccapurple">Span nesnesi oluşturuluyor:</b><br>
+            <br>
+            var silItem = document.createElement("span");<br>
+            <br>
+            <b style="color: rebeccapurple">Span nesnesini "sil" yapar:</b><br>
+            <br>
+            silItem.innerHTML="  sil";<br>
+            <br>
+            <b style="color: rebeccapurple">Tıklandığı eleman sil metodonu çalıştırır. Silinecek nesnesinin id sini gönderir:</b><br>
+            <br>
+            silItem.setAttribute("onclick", "elemanSil(" + itemId + ")");<br>
+            <br>
+            <b style="color: rebeccapurple">Ürünler nesnesinin altına "liste" nesnesini ekler.Onun da altına silltem nesnesini
+             ekledik ve itemId yi arttırıyoruz:</b><br>
+            <br>
+            document.getElementById("urunler").appendChild(liste).appendChild(silItem);<br>
+            itemId++;<br>
+            }<br>
+            <h2 style="color: blueviolet">Alışveriş Listesi</h2>
+            <img src="../images/alisverisLis.png"><br>
+        </p>
+
+
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+
+
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href= "fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+            <li><a href="fonksiyonkullanimi.html">Fonksiyon Kullanımı</a></li>
+            <li><a href="nesne.html">Nesne Modeli ve Kullanım </a></li>
+            <li><a href="dom.html">Document Object Model</a></li>
+            <li><a href="#">Alışveriş Listesi Rapor</a></li>
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

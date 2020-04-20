@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="utf-8">
+    <title>2 Column Frames Layout &mdash; Left Menu</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 100%;
+            font-family:"Arial";
+            height: 100%;
+        }
+        main{
+            position: fixed;
+            right: 0;
+            left: 260px;
+            bottom: 0;
+            overflow: auto;
+            background: white;
+            top: 0;
+        }
+        #nav{
+            position: absolute;
+            width:200px;
+            bottom: 0;
+            left: 0;
+            top: 0;
+            height: 100%;
+            overflow: hidden;
+            background:#FFD54F;
+        }
+
+        a:hover {
+            background: white; /*buton rengi*/
+            border-radius: 0px;
+            font-size:18px;
+        }
+        .innertube{
+            margin: 20px;
+        }
+
+        p {
+            color:black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        * html body{
+            padding: 0 0 0 230px;
+        }
+
+        * html main{
+            height: 100%;
+            width: 100%;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+<main>
+    <div class="innertube">
+
+        <center><h1 style="color: rebeccapurple">JAVASCRIPT NESNE KAVRAMI</h1></center>
+
+        JavaScript'te neredeyse "her şey" bir nesnedir.<br>
+
+        *Boolean'lar nesne olabilir (new anahtar kelime ile tanımlanmışsa).<br>
+        *Sayılar nesne olabilir (new anahtar kelime ile tanımlanmışsa).<br>
+        *Dizeler nesne olabilir (new anahtar kelime ile tanımlanmışsa).<br>
+        *Tarihler her zaman nesnedir.<br>
+        *Matematik her zaman nesnedir.<br>
+        *Normal ifadeler her zaman nesnedir.<br>
+        *Diziler her zaman nesnedir.<br>
+        *İşlevler her zaman nesnedir.<br>
+        *Nesneler her zaman nesnedir.<br>
+        *Temel öğeler dışındaki tüm JavaScript değerleri nesnedir.<br>
+
+        <h2 style="color: rebeccapurple">Javascript Nesne Oluşturulması</h2>
+        Javascript, standart olarak Object adında bir nesne sunar.
+        Oluşturulan nesneler de Object türündedir. Örneğin bir nesnenin oluşturulmasını şu şekilde yapabiliriz:<br>
+        <br>
+        <b style="color: blue">var</b> bankAccount = <b style="color: blue">new</b>  Object();<br><br>
+        <img src="../images/js_89.png"><br>
+
+        Bu şekilde herhangi bir üyesi bulunmayan ve
+        sadece <b style="color:red">“Object”</b>  tipine ait üyeleri barındıran bir <b style="color:red"> bankAccount</b> nesnesi oluşturmuş olduk.
+        Bu nesneyi daha basit bir şekilde aşağıdaki gibi tanımlayabiliriz.<br>
+        <br>
+        <b style="color: blue">var</b> bankAccount = {};<br>
+        <br>
+        Yani Object anahtar kelimesini kullanmadan da tanımlama yapmak mümkündür.<br>
+        <h2 style="color: rebeccapurple">Nesnelere Property eklenmesi</h2>
+        Oluşturduğumuz nesnelere property eklenmesi işlemini aşağıdaki şeklide gerçekleştirebiliriz.<br>
+        <br>
+        <b style="color: blue">var</b> bankAccount = {};<br>
+        bankAccount.number = 114521;<br>
+        <br>
+        nesnelere bir değer veya fonksiyonu property olarak belirleyebiliriz. Bir property eğer bir fonksiyonu işaret ediyorsa ona metod diyebiliriz.<br>
+        <br>
+        <b style="color: green">Örnek</b><br>
+        <b style="color: blue">var</b> bankAccount = {};
+        bankAccount.number = 114521;<br>
+        bankAccount.owner =  <b style="color: dodgerblue">"seyma";</b><br>
+        bankAccount.balance = 500;<br>
+        bankAccount.details = <b style="color: blue">function ()</b> {<br>
+        <b style="color: blue">return </b> <b style="color: dodgerblue"> "Account: "</b> +<b style="color: blue">this</b> .number +<br>
+        " belongs to " + <b style="color: blue">this</b> .owner +<br>
+        "\nBalance: " + <b style="color: blue">this</b> .balance;<br><br>
+        };<br>
+        Yukarıda tanımladığımız<b style="color: red">  bankAccount</b> nesnesine ait<b style="color: red"> “details”</b> isimli property bir metoddur.
+        Metodlar içerisinde kullanılan this anahtar kelimesi metodun ait olduğu nesneyi ifade eder.
+        Bu sebeple yukaridaki<b style="color: red"> “details”</b> metodu içerisinden diğer üyelere <b style="color: red">this</b> anahtar kelimesi ile ulaşabilmekteyiz.
+        Metod içerisinden this anahtar kelimesini kullanmadan bir üyeye erişmeye çalışırsak hata ile karşılaşırız.<br>
+        <br>
+        <br>
+        <h2 style="color: rebeccapurple">Nesne Üyelerinin Oluşturma Sırasında Eklenmesi</h2>
+        Nesneleri oluşturduktan sonra üyelerin belirlenmesi mümkün olduğu gibi, nesne oluşturulurken üyelerinin belirlenmesi de mümkündür.
+        Kodun temiz olması açısından kullanılabilecek bir gösterim olarak değerlendirilebilir.<br>
+        <br>
+        <b style="color: green">Örnek</b><br>
+        <b style="color: blue">var</b> bankAccount = {;<br>
+        number = 114521;<br>
+        owner =  <b style="color: dodgerblue">"seyma";</b><br>
+        balance = 500;<br>
+        details = <b style="color: blue">function ()</b> {<br>
+        <b style="color: blue">return </b> <b style="color: dodgerblue"> "Account: "</b> +<b style="color: blue">this</b> .number +<br>
+        " belongs to " + <b style="color: blue">this</b> .owner +<br>
+        "\nBalance: " + <b style="color: blue">this</b> .balance;<br><br>
+        };<br>
+        <h2 style="color: rebeccapurple">Constructor(kurucu metod) Kullanılması</h2>
+        Yukarıda tanımladığımız nesne oluşturma şeklini tekrar hatırlayalım. Basit haliyle bir nesnenin oluşturulması şu şekildeydi.<br>
+        <br>
+        <b style="color: blue">var</b> bankAccount = {};<br>
+        Bu nesneye bir constructor eklemek istediğimizde ne yapmamız gereken şudur:<br>
+        <b style="color: blue">var</b> bankAccount =<b style="color: blue"> function </b> (number, owner, balance){};<br>
+        <br>
+        Bu fonksiyon “{}” parantezlerden hemen önce belirlenmiştir. Javascript ortamında construstor fonksiyonlar property’leri <b style="color: blue">this</b>
+        isimli nesneye atarlar. Javascript ortamındaki constructor fonksiyonlar C# veya Java’daki sınıflara benzerler.
+        Constructor kullanarak yeni bir nesne oluşturup o nesneye<br><br>
+        <b style="color: green">Örnek</b><br>
+        <b style="color: blue">var</b> BankAccount =<b style="color: blue">function ()</b> (number, owner, balance){<br>
+        <b style="color: blue">this</b>.number = number,<br>
+        <b style="color: blue">this</b>.owner = owner,<br>
+        <b style="color: blue">this</b>.balance = balance,<br>
+        <b style="color: blue">this</b>.details = function() {<br>
+        <b style="color: blue">return </b>"Account: " + <b style="color: blue">this</b>.number +<br>
+        " belongs to " + <b style="color: blue">this</b>.owner +<br>
+        "\nBalance: " + <b style="color: blue">this</b>.balance;<br>
+        };<br>
+        };<br>
+        Oluşturduğumuz bu nesneyi şu şeklide kullanabiliriz.<br>
+        <br>
+        <b style="color: blue">var</b> myAccount = <b style="color: blue">new</b> BankAccount(914521,  <b style="color: dodgerblue">"Bayram Üçüncü";</b>, 500);<br>
+        Constructor fonksiyonu tanımladıktan sonra nesne örneğinizi oluşturmak için <b style="color: blue">“new”</b> operatörünü kullanabilirsiniz.
+        Oluşturduğunuz bu nesne örneğinin property’lerine ulaşabilirsiniz.<br>
+
+        <h2 style="color: rebeccapurple">Nesnelerin Prototiplerinin Kullanılması</h2>
+
+        Javascript Object tipinde bulunan  <b style="color:red"> prototype </b>adlı özel bir metod, tüm nesnelerde bulunur. Bu metod sayesinde nesnelere yeni property veya metodlar ekleyebilirsiniz.
+        Constructor fonksiyonları ile kendi özel tiplerimizi oluşturmamız mümkündür. Oluşturduğumuz tipe ait iki farklı nesne örneği oluşturacağımız vakit her bir nesne örneği
+        kendi property kümesini bünyesinde barındırır. Bu durum, veri tutucu property’ler için makul görünse de metodlar için bir sorun haline gelebilir.<br>
+        Metodlarımızı oluşturduğumuz tip içerisinden ayırabiliriz.<br>
+        <br>
+        <b style="color: green"> Prototype kullanılmadan</b><br>
+
+        <b style="color: green">Örnek-1</b><br>
+
+        <b style="color: blue">var</b> Rectagle =  <b style="color: blue">function</b> (x,y) {<br>
+        <b style="color: blue">this</b>.x = x;<br>
+        <b style="color: blue">this</b>.y = y;<br>
+        <b style="color: blue">this</b>.Area =  <b style="color: blue">function()</b> { return x*y; };<br>
+        };<br><br>
+        <b style="color: green">Prototype kullanarak </b><br>
+        <b style="color: green">Örnek-2</b><br>
+        <b style="color: blue">var</b> Rectangle =<b style="color: blue">function</b>  (x, y) {<br>
+        <b style="color: blue">this</b>.x = x;<br>
+        <b style="color: blue">this</b>.y = y;<br>
+        };<br>
+        Rectangle.prototype = {<br>
+        Area:  <b style="color: blue">function()</b> { return (<b style="color: blue">this</b> .x * <b style="color: blue">this</b> .y); }<br>
+        };<br>
+        <br>
+        Örnek-2 de alan hesaplayıcı metod olan Area metodu Örnek-2 de tipin prototype metoduna tanımlanmıştır.<br><br>
+        Bu bize ne fayda sağlamıştır? Örnek-1 de constructor içinde tanımlanan fonksiyon için her <b style="color: red"> Rectangle</b> nesnesi
+        oluşturulduğunda bellekte anonim bir fonksiyon oluşturulacak ve yer tutacak. Ancak Örnek-2 de durum farklı olacaktır.
+        Prototype property’ler static olduklarından her <b style="color:red;">Rectangle</b>  nesnesi prototype içine tanımlanan metodları referans olarak görecektir.<br>
+        Ayrıca Rectange tipine ait değer tutucu (x,y) üyeler ve fonksiyonlar ayrılmış oldu. Bu ayrımı farklı Javascript dosyalarına bile dağıtmak mümkündür.<br>
+        Prototype kullanımı öncelikli olarak performans artışı sağlamakla birlikte kodun okunabilirliğini de arttırmak açısından faydalı olmaktadır.<br>
+        </p>
+    </div>
+</main>
+
+<nav id="nav">
+    <div class="innertube">
+        <ul>
+            <li><a href="javaScript.html">JavaScript Nedir</a></li>
+            <li><a href="yazilimYapisi.html">Yazılım(syntax)Yapısı</a></li>
+            <li><a href="degiskenler.html">Değişkenler</a></li>
+            <li><a href="operatorler.html">Operatörler</a></li>
+            <li><a href="veriTipleri.html">Veri Tipleri</a>
+            <li><a href="fonksiyonYapisi.html">Fonksiyon Yapısı</a></li>
+            <li><a href="stringler.html">Stringler,Sayılar</a></li>
+            <li><a href="diziler.html">Diziler ve Dizi İşlemleri</a></li>
+            <li><a href="ifkosul.html">İf koşul yapıları</a></li>
+            <li><a href="donguler.html">Döngüler</a></li>
+            <li><a href="tipdonusumleri.html">Tip Dönüşümleri</a></li>
+            <li><a href="fonksiyonkullanimi.html">Fonksiyon Kullanımı</a></li>
+            <li><a href="#">Nesne Modeli ve Kullanım </a></li>
+            <li><a href="dom.html">Document Object Model</a></li>
+            <li><a href="alisverisRapor.html">Alışveriş Listesi Rapor</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>

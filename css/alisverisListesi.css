@@ -1,0 +1,53 @@
+body {
+    background-color: #FFC0CB;
+    font-family:"Arial";
+}
+a:hover {
+    background: white; /*buton rengi*/
+    border-radius:0px;
+    font-size:18px;
+}
+.innertube {
+    position: absolute;
+    left: 10px;
+
+}
+.anaGovde {
+    position: absolute;
+    left: 500px;
+    top: 350px;
+
+}
+.basGovde {
+    position: absolute;
+    left: 400px;
+    top: 290px;
+
+}
+.ortaGovde {
+    position: absolute;
+    left: 300px;
+    top: 200px;
+
+}
+#products {
+    position: relative;
+    left: 140px;
+    top: 300px;
+
+}
+button {
+    border-radius:  30px/30px;
+    font-size:15px;
+    color: black;
+    font-weight:bold;
+    border-top:5px solid #333;
+    border-left:1px solid #333;
+    border-right:1px solid #333;
+    border-bottom:1px solid #666;
+    background-color:#FFC0CB;
+    width:auto;
+    text-decoration:none;
+}
+
+
