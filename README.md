@@ -9,6 +9,6 @@ Github Linki : https://github.com/seymakucukkaraca/Js_ogreniyorum<br/>
 2-) Adam Asmaca Oyunu Ödevi Sitesi : -<br/>
 3-) Kullanıcı Formu Ödevi Sitesi : https://seymakucukkaraca.github.io/Js_ogreniyorum/pages/hw2examples/kullaniciFormu.html<br/>
 4-) Alışveriş Listesi Ödevi Sitesi : https://seymakucukkaraca.github.io/Js_ogreniyorum/pages/hw2examples/alisverisListesi.html<br/>
-5-) JavaScript Fonksiyon Kullanımı (Birden fazla sayfada anlatılmıştır.) : seymakucukkaraca.github.io/Js_ogreniyorum/pages/fonksiyonkullanimi.html<br/>
+5-) JavaScript Fonksiyon Kullanımı (Birden fazla sayfada anlatılmıştır.) : https://seymakucukkaraca.github.io/Js_ogreniyorum/pages/fonksiyonkullanimi.html<br/>
 6-) JavaScript Object ( Nesne) Modeli ve Kullanımı : https://seymakucukkaraca.github.io/Js_ogreniyorum/pages/nesne.html<br/>
 7-) JavaScript DOM (Document Object Model) Kullanımı : https://seymakucukkaraca.github.io/Js_ogreniyorum/pages/dom.html<br/>
